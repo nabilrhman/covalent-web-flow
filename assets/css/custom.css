@@ -24,12 +24,29 @@
     font-weight: normal !important;
     font-size: 16px !important;
     text-transform: uppercase;
+
 }
+
+.cova_logo_subtitle_text {
+
+   padding-bottom: 5px;
+    border-color: #0097A7;
+}
+
+.cova_logo_subtitle_text:hover
+{
+
+    border-bottom: 1px solid;
+    transition: .5s all ease;
+    -webkit-transition: .5s all ease;
+}
+
 
 .header-play-icon
 {
     font-size: 22px !important;
     margin-left: 7px !important;
+    margin-right: 7px !important;
 }
 
 .title_border_right h4::before {

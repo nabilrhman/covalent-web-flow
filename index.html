@@ -29,6 +29,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/responsive-custom.css">
     <!-- Color CSS -->
     <link id="layoutstyle" rel="stylesheet" href="assets/color/theme-green.css">
     <!-- Prism CSS -->
@@ -224,16 +225,38 @@
 
                 <div class="btn_group animation text-center" style="margin-top: 30px !important;"
                      data-animation="fadeInDown" data-animation-delay="0.7s">
-                    <a href="https://goo.gl/forms/KwQn9zcY0afj6cQR2"
-                       class="btn btn-default mr-2 mb-2 us">Join Private Testnet <i
-                            class="ion-ios-arrow-thin-right"></i></a>
-                    <a href="https://goo.gl/forms/KwQn9zcY0afj6cQR2" class="btn btn-default mb-2 zh">加入私有测试网络 <i
-                            class="ion-ios-arrow-thin-right"></i></a>
+                    <div style="display: inline">
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 public-testnet-btn us" href="javascript:void(0)" role="button" id="publicTestnetBtn_us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Join Public Testnet </a>
 
-                    <a href="https://github.com/covalent-hq/wiki/wiki"
-                       class="btn btn-default mr-2 mb-2 us">Check Covalent GitHub <i
+                        <div class="dropdown-menu mr-2 mb-2" aria-labelledby="dropdownMenuLink" id="publicTestnetGroupList_us">
+                            <a class="dropdown-item" href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
+                            <a class="dropdown-item" href="https://testnet-faucet.covalent.ai">Testnet Faucet</a>
+                            <a class="dropdown-item" href="https://docs.covalent.ai/report-join/">Developers</a>
+                        </div>
+                    </div>
+
+                    <div style="display: inline">
+
+                    <a class="btn btn-default dropdown-toggle mr-2 mb-2 telegram-btn us" href="javascript:void(0)" role="button" id="telegramBtn_us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Join Telegram Group
+                    </a>
+
+                    <a class="btn btn-default dropdown-toggle mr-2 mb-2 telegram-btn zh" href="javascript:void(0)" role="button" id="telegramBtn_zh" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        加入 Telegram 聊天群组
+                    </a>
+
+                    <div class="dropdown-menu mr-2 mb-2" aria-labelledby="dropdownMenuLink" id="telegramGroupList" style="border: 1px solid rgba(0,0,0,0)">
+                        <a class="dropdown-item us" href="https://t.me/covalentofficial">English Group</a>
+                        <a class="dropdown-item zh" href="https://t.me/covalentofficial">英文群组</a>
+                        <a class="dropdown-item us" href="https://t.me/covalentchina">Chinese Group</a>
+                        <a class="dropdown-item zh" href="https://t.me/covalentchina">中文群组</a>
+                    </div>
+                    </div>
+                    <a href="https://github.com/covalent-hq"
+                       class="btn btn-default mr-2 mb-2 check-github-btn us">Check Covalent GitHub <i
                             class="ion-ios-arrow-thin-right"></i></a>
-                    <a href="https://github.com/covalent-hq/wiki/wiki" class="btn btn-default mb-2 zh">查看 Github 页面 <i
+                    <a href="https://github.com/covalent-hq" class="btn btn-default mb-2 check-github-btn zh">查看 Github 页面 <i
                             class="ion-ios-arrow-thin-right"></i></a>
 
                 </div>
@@ -1318,6 +1341,8 @@ computed_result = DataUserCodeExecute(data_hash,
 <!-- Latest jQuery -->
 <script src="assets/js/jquery-1.12.4.min.js"></script>
 <!-- Latest compiled and minified Bootstrap -->
+<script src="assets/js/popper.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- owl-carousel min js  -->
 <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
@@ -1410,6 +1435,7 @@ computed_result = DataUserCodeExecute(data_hash,
 						$("#" + id + "_nav").addClass('active');
 					}
 				})
+
     });
 </script>
 </body>

@@ -1,87 +1,106 @@
-
 /* -------------------------------------------------
   min-width: 1200px
 ---------------------------------------------------*/
-@media (min-width:1200px){
+@media (min-width: 1200px)
+{
 
 }
 
 /* -------------------------------------------------
   min-width: 991px and max-width: 1199px
 ---------------------------------------------------*/
-@media only screen and (min-width: 991px) and (max-width: 1199px) {
+@media only screen and (min-width: 991px) and (max-width: 1199px)
+{
 
 }
 
 /* -------------------------------------------------
   min-width: 768px and max-width: 991px
 ---------------------------------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
 
 }
-
-
 
 /* -------------------------------------------------
   max-width: 1600px
 ---------------------------------------------------*/
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1600px)
+{
 
 }
+
 /* -------------------------------------------------
   max-width: 1440px
 ---------------------------------------------------*/
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px)
+{
 
 }
+
 /* -------------------------------------------------
   max-width: 1199px
 ---------------------------------------------------*/
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1199px)
+{
 
 }
+
 /* -------------------------------------------------
   min-width: 991px
 ---------------------------------------------------*/
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 991px)
+{
 
 }
 
 /* -------------------------------------------------
   max-width: 767px
 ---------------------------------------------------*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px)
+{
 
 }
+
 /* -------------------------------------------------
   max-width: 640px
 ---------------------------------------------------*/
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 640px)
+{
 
 }
+
 /* -------------------------------------------------
   max-width: 580px
 ---------------------------------------------------*/
-@media only screen and (max-width: 580px) {
-    .heading_button, .heading_buttons_dropdown, .telegram_dropdown {
+@media only screen and (max-width: 580px)
+{
+    /* MAKES HEADING BUTTONS AND DROPDOWS SAME SIZED FOR TABLET */
+    .heading_button, .heading_buttons_dropdown, .telegram_dropdown
+    {
         width: 278px !important;
         text-align: center;
-
     }
 }
+
 /* -------------------------------------------------
   max-width: 480px
 ---------------------------------------------------*/
-@media only screen and (max-width: 480px) {
-    .heading_button, .heading_buttons_dropdown, .telegram_dropdown {
+@media only screen and (max-width: 480px)
+{
+    /* MAKES HEADING BUTTONS AND DROPDOWS SAME SIZED FOR MOBILE*/
+    .heading_button, .heading_buttons_dropdown, .telegram_dropdown
+    {
         width: 236px;
         font-size: 14px;
         text-align: center;
     }
 }
+
 /* -------------------------------------------------
   max-width: 380px
 ---------------------------------------------------*/
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 380px)
+{
 
 }

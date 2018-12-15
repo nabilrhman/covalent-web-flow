@@ -182,7 +182,8 @@
     </div>
 </header>
 <!-- END HEADER -->
-<!-- START SECTION BANNER -->
+
+<!-- START HEADING SECTION BANNER -->
 <section id="home" class="section_banner blue_light_bg banner_shape" data-z-index="1" data-bleed="-40"
          data-parallax="scroll">
     <div id="banner_bg_effect" class="banner_effect"></div>
@@ -206,15 +207,28 @@
                 <!--<div class="box_wrap_noshadow animation text-center" data-animation="fadeInDown" data-animation-delay="0.7s">-->
                 <!--<a href="https://www.youtube.com/watch?v=KYMddDJPVI8" class="video play_btn"><span class="play_icon"></span></a>-->
                 <!--</div>-->
-                <div class="banner_text text_md_center text-center mb-4 animate-hover-grow">
+                <div class="banner_text text_md_center text-center mb-4 animate-hover-grow us">
                     <a href="https://www.youtube.com/watch?v=KYMddDJPVI8" class="video">
-                        <span class="animation cova_logo_subtitle text-white us" data-animation="fadeInDown"
-                              data-animation-delay="0.6s"><span class="align-middle"><i class="fa fa-play-circle header-play-icon align-middle"></i><span class="cova_logo_subtitle_text">What is COVA?</span></span>
-                        <span class="animation cova_logo_subtitle text-white zh" data-animation="fadeInDown"
-                              data-animation-delay="0.6s"><span class="align-middle">
-                            <i class="fa fa-play-circle header-play-icon align-middle"></i>观看宣传影片?</span>
+                        <span class="animation cova_logo_subtitle text-white" data-animation="fadeInDown"
+                              data-animation-delay="0.6s">
+                            <span class="align-middle">
+                                <i class="fa fa-play-circle header-play-icon align-middle"></i>
+                                <span class="cova_logo_subtitle_text">What is COVA?</span>
+                            </span>
+                        </span>
                     </a>
+                </div>
 
+                <div class="banner_text text_md_center text-center mb-4 animate-hover-grow zh">
+                    <a href="https://v.qq.com/x/page/k08020rcvug.html" class="video">
+                        <span class="animation cova_logo_subtitle text-white" data-animation="fadeInDown"
+                              data-animation-delay="0.6s">
+                            <span class="align-middle">
+                                <i class="fa fa-play-circle header-play-icon align-middle"></i>
+                                <span class="cova_logo_subtitle_text">观看宣传影片?</span>
+                            </span>
+                        </span>
+                    </a>
                 </div>
 
                 <!--<div class="banner_text text_md_center text-center mb-4 animate-hover-grow">-->
@@ -228,47 +242,71 @@
 
                 <div class="btn_group animation text-center" style="margin-top: 30px !important;"
                      data-animation="fadeInDown" data-animation-delay="0.7s">
-                    <div style="display: inline">
+                    <div class="us" style="display: inline">
                         <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us"
-                           href="javascript:void(0)" role="button" id="publicTestnetBtn_us" data-toggle="dropdown"
+                           href="javascript:void(0)" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            Join Public Testnet </a>
+                            Join Public Testnet
+                        </a>
 
-                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown" aria-labelledby="dropdownMenuLink"
-                             id="publicTestnetGroupList_us">
-                            <a class="dropdown-item" href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
-                            <a class="dropdown-item" href="https://testnet-faucet.covalent.ai">Testnet Faucet</a>
-                            <a class="dropdown-item" href="https://docs.covalent.ai/report-join/">Developers</a>
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown us" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item us" href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
+                            <a class="dropdown-item us" href="https://testnet-faucet.covalent.ai">Testnet Faucet</a>
+                            <a class="dropdown-item us" href="https://docs.covalent.ai/report-join/">Developers</a>
                         </div>
                     </div>
 
-                    <div style="display: inline">
+                    <div class="zh" style="display: inline">
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button"
+                           href="javascript:void(0)" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            加入公共测试网络
+                        </a>
 
-                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us" href="javascript:void(0)"
-                           role="button" id="telegramBtn_us" data-toggle="dropdown" aria-haspopup="true"
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item zh" href="https://docs.covalent.ai/quick-start/">快速开始</a>
+                            <a class="dropdown-item zh" href="https://testnet-faucet.covalent.ai">测试网络 Faucet</a>
+                            <a class="dropdown-item zh" href="https://docs.covalent.ai/report-join/">开发者指南</a>
+                        </div>
+                    </div>
+
+                    <div class="us" style="display: inline">
+
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button" href="javascript:void(0)"
+                           role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
                             Join Telegram Group
                         </a>
 
-                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button zh" href="javascript:void(0)"
-                           role="button" id="telegramBtn_zh" data-toggle="dropdown" aria-haspopup="true"
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown telegram_dropdown"
+                             aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="https://t.me/covalentofficial">English Group</a>
+                            <a class="dropdown-item" href="https://t.me/covalentchina">Chinese Group</a>
+                        </div>
+
+                    </div>
+
+                    <div class="zh" style="display: inline">
+
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button" href="javascript:void(0)"
+                           role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
                             加入 Telegram 聊天群组
                         </a>
 
                         <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown telegram_dropdown"
-                             aria-labelledby="dropdownMenuLink" style="">
-                            <a class="dropdown-item us" href="https://t.me/covalentofficial">English Group</a>
-                            <a class="dropdown-item zh" href="https://t.me/covalentofficial">英文群组</a>
-                            <a class="dropdown-item us" href="https://t.me/covalentchina">Chinese Group</a>
-                            <a class="dropdown-item zh" href="https://t.me/covalentchina">中文群组</a>
+                             aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="https://t.me/covalentofficial">英文群组</a>
+                            <a class="dropdown-item" href="https://t.me/covalentchina">中文群组</a>
                         </div>
+
                     </div>
+
                     <a href="https://github.com/covalent-hq"
                        class="btn btn-default mr-2 mb-2 check-github-btn heading_button us">Check Covalent GitHub <i
                             class="ion-ios-arrow-thin-right"></i></a>
                     <a href="https://github.com/covalent-hq"
-                       class="btn btn-default mb-2 check-github-btn zh">查看 Github 页面 <i
+                       class="btn btn-default mr-2 mb-2 check-github-btn heading_button zh">查看 Github 页面 <i
                             class="ion-ios-arrow-thin-right"></i></a>
 
                 </div>
@@ -337,9 +375,9 @@
     </div>
 
 </section>
-<!-- END SECTION BANNER -->
+<!-- END HEADING SECTION BANNER -->
 
-<!-- START SECTION BANNER -->
+<!-- START INTRO SECTION -->
 <section class="blue_light_bg banner_shape" data-z-index="1" data-bleed="-40" data-parallax="scroll"
          data-image-src="assets/images/banner_bg3.png">
     <div class="divider very_small_divider"></div>
@@ -373,10 +411,10 @@
     <div class="divider medium_divider"></div>
     <div class="angle_bottom"></div>
 </section>
-<!-- END SECTION BANNER -->
+<!-- END INTRO SECTION -->
 
 
-<!-- START SECTION ABOUT -->
+<!-- START DATA CONTROL SECTION -->
 <section class="about_shape_bg">
     <div class="container">
         <div class="row">
@@ -486,10 +524,10 @@
     </div>
     <div class="rounded_shape"></div>
 </section>
-<!-- END SECTION ABOUT -->
+<!-- END DATA CONTROL SECTION -->
 
 
-<!-- START SECTION TOKEN SALE -->
+<!-- START TECHNOLOGY SECTION -->
 <section id="tech" class="section_token blue_light_bg" data-z-index="1" data-bleed="-40" data-parallax="scroll"
          data-image-src="assets/images/token_bg.png">
     <div class="angle_top"></div>
@@ -518,9 +556,9 @@
     <div class="divider medium_divider"></div>
     <div class="angle_bottom"></div>
 </section>
-<!-- END SECTION TOKEN SALE -->
+<!-- END TECHNOLOGY SECTION -->
 
-<!-- START SECTION ABOUT -->
+<!-- START CENTRIFUGE SECTION -->
 <section class="about_shape_bg">
     <div class="container">
         <div class="row align-items-center">
@@ -598,9 +636,9 @@ computed_result = DataUserCodeExecute(data_hash,
     <div class="rounded_shape"></div>
 </section>
 
-<!-- END SECTION ABOUT -->
+<!-- END CENTRIFUGE SECTION -->
 
-<!-- START SECTION TIMELINE -->
+<!-- START ROADMAP SECTION -->
 <section class="blue_light_bg" data-bleed="-40" data-z-index="1" data-parallax="scroll"
          data-image-src="assets/images/roadmap_bg2.png">
     <div class="angle_top"></div>
@@ -817,9 +855,9 @@ computed_result = DataUserCodeExecute(data_hash,
     <div class="angle_bottom" style="border-bottom-color: #f1f1f1 !important;"></div>
 
 </section>
-<!-- END SECTION TIMELINE -->
+<!-- END ROADMAP SECTION -->
 
-<!-- START SECTION TEAM -->
+<!-- START TEAM SECTION -->
 <section id="team" class="section_team bg_gray">
     <div class="angle_top" style="border-top-color: #f1f1f1 !important;"></div>
     <div class="container">
@@ -986,9 +1024,9 @@ computed_result = DataUserCodeExecute(data_hash,
     <div class="divider large_divider"></div>
     <div class="angle_bottom"></div>
 </section>
-<!-- END SECTION TEAM -->
+<!-- END TEAM SECTION -->
 
-<!-- START SECTION TEAM -->
+<!-- START TECHNICAL CONTRIBUTORS SECTION -->
 <section class="section_team" data-bleed="-40" data-z-index="1" data-parallax="scroll"
          data-image-src="assets/images/banner_bg3.png">
     <div class="container">
@@ -1009,9 +1047,9 @@ computed_result = DataUserCodeExecute(data_hash,
         </div>
     </div>
 </section>
-<!-- END SECTION TEAM -->
+<!-- END TECHNICAL CONTRIBUTORS SECTION -->
 
-<!-- START SECTION BLOG -->
+<!-- START MEDIA SECTION -->
 <section class="small_pt small_pb" id="media">
     <div class="container">
         <div class="row">
@@ -1148,9 +1186,9 @@ computed_result = DataUserCodeExecute(data_hash,
         </div>
     </div>
 </section>
-<!-- END SECTION BLOG -->
+<!-- END MEDIA SECTION -->
 
-<!-- START CLIENTS SECTION -->
+<!-- START BACKED BY SECTION -->
 <section class="client_logo">
     <div class="container">
         <div class="row">
@@ -1213,9 +1251,9 @@ computed_result = DataUserCodeExecute(data_hash,
         </div>
     </div>
 </section>
-<!-- END CLIENTS SECTION -->
+<!-- END BACKED BY SECTION -->
 
-<!-- START SECTION CONTACT -->
+<!-- START CONTACT SECTION -->
 <section id="contact" class="contact_section" data-parallax="scroll" data-image-src="assets/images/app_bg.png">
     <div class="container">
         <div class="row">
@@ -1307,7 +1345,7 @@ computed_result = DataUserCodeExecute(data_hash,
 
     </div>
 </section>
-<!-- END SECTION CONTACT -->
+<!-- END CONTACT SECTION -->
 
 
 <!-- START FOOTER SECTION -->
@@ -1375,24 +1413,32 @@ computed_result = DataUserCodeExecute(data_hash,
                         data-animation-delay="0.2s">社交媒体</h4>
                     <ul class="footer_social list_none">
                         <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.2s"><a
-                                href="https://t.me/covalentofficial"><i class="fa fa-telegram"></i> Telegram</a></li>
+                                href="https://t.me/covalentofficial"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.2s"><a
+                                href="https://github.com/covalent-hq"><i class="fab fa-github"></i> Github</a></li>
+
+                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.2s"><a
+                                href="https://gitter.im/covalent-hq/"><i class="fab fa-gitter"></i> Gitter</a></li>
                         <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.3s"><a
-                                href="https://medium.com/@covatoken"><i class="fa fa-medium"></i> Medium</a></li>
+                                href="https://medium.com/@covatoken"><i class="fab fa-medium"></i> Medium</a></li>
                         <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.4s"><a
                                 href="https://www.reddit.com/r/Covalent_Official/"><i
-                                class="fa fa-reddit"></i> Reddit</a></li>
+                                class="fab fa-reddit"></i> Reddit</a></li>
                         <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.5s"><a
-                                href="https://twitter.com/covatoken"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                href="https://twitter.com/covatoken"><i class="fab fa-twitter"></i> Twitter</a></li>
+
 
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.2s"><a
-                                href="https://t.me/covalentofficial"><i class="fa fa-telegram"></i> Telegram</a></li>
+                                href="https://t.me/covalentofficial"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.2s"><a
+                                href="https://github.com/covalent-hq"><i class="fab fa-github"></i> Github</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.3s"><a
-                                href="https://medium.com/@covatoken"><i class="fa fa-medium"></i> Medium</a></li>
+                                href="https://medium.com/@covatoken"><i class="fab fa-medium"></i> Medium</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.4s"><a
                                 href="https://www.reddit.com/r/Covalent_Official/"><i
-                                class="fa fa-reddit"></i> Reddit</a></li>
+                                class="fab fa-reddit"></i> Reddit</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.5s"><a
-                                href="https://twitter.com/covatoken"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                href="https://twitter.com/covatoken"><i class="fab fa-twitter"></i> Twitter</a></li>
                     </ul>
                 </div>
 
@@ -1461,12 +1507,12 @@ computed_result = DataUserCodeExecute(data_hash,
             var op_lang = lang == 'zh' ? 'us' : 'zh';
             $('.' + lang).show();
             $('.' + op_lang).hide();
-            if (lang === 'us') {
+            /*if (lang === 'us') {
                 $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
             }
             else {
                 $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
-            }
+            }*/
         });
 
         /*$.get("http://ipinfo.io", function (response) {

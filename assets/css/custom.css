@@ -218,3 +218,101 @@ a {
     color: #0097a7;
     font-weight: 600 !important;
 }
+
+.heading_buttons_dropdown
+{
+    background-color: #006978 !important;
+    border: 1px solid rgba(0,0,0,0);
+    min-width: 229px !important;
+}
+
+.telegram_dropdown
+{
+    min-width: 248px !important;
+}
+
+.heading_buttons_dropdown .dropdown-item
+{
+    color: white;
+
+}
+
+.dropdown-item:hover
+{
+    color: #09ec86;
+    padding-left: 15px;
+}
+
+/* ANIMATION DROPDOWN */
+.dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.dropdown-menu.show {
+    -webkit-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -moz-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -ms-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -o-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+
+    max-height: 190px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+}
+
+/*.heading-icons-row
+{
+    position: relative;
+    z-index: -1;
+}
+
+.heading-icons li {
+    margin-bottom: 25px;
+    z-index: 0;
+}
+.heading-icons li:last-child {
+    margin-bottom: 0px;
+}
+.heading-icons li i {
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    color: #ffffff;
+    float: left;
+    font-size: 26px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    width: 46px;
+}
+
+.heading-icons {
+    display: inline-block;
+    width: 100%;
+}
+
+.heading-icons li {
+    float: left;
+    min-width: 50px !important;
+    width: 5.3%;
+
+}
+.heading-icons li i {
+    background-color: #0097a7;
+    border: 0 none;
+    display: inline-block;
+    float: none;
+    margin-bottom: 10px;
+}*/
+

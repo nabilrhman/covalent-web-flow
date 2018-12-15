@@ -63,13 +63,21 @@
   max-width: 580px
 ---------------------------------------------------*/
 @media only screen and (max-width: 580px) {
+    .heading_button, .heading_buttons_dropdown, .telegram_dropdown {
+        width: 278px !important;
+        text-align: center;
 
+    }
 }
 /* -------------------------------------------------
   max-width: 480px
 ---------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-
+    .heading_button, .heading_buttons_dropdown, .telegram_dropdown {
+        width: 236px;
+        font-size: 14px;
+        text-align: center;
+    }
 }
 /* -------------------------------------------------
   max-width: 380px

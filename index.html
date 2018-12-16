@@ -240,7 +240,8 @@
                 <!--</div>-->
 
 
-                <div class="btn_group animation text-center" style="margin-top: 30px !important;"
+                <div class="btn_group animation text-center heading_buttons_wrapper"
+                     style="margin-top: 30px !important;"
                      data-animation="fadeInDown" data-animation-delay="0.7s">
                     <div class="us" style="display: inline">
                         <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us"
@@ -249,8 +250,10 @@
                             Join Public Testnet
                         </a>
 
-                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown us" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item us" href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown us"
+                             aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item us"
+                               href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
                             <a class="dropdown-item us" href="https://testnet-faucet.covalent.ai">Testnet Faucet</a>
                             <a class="dropdown-item us" href="https://docs.covalent.ai/report-join/">Developers</a>
                         </div>
@@ -263,7 +266,8 @@
                             加入公共测试网络
                         </a>
 
-                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown"
+                             aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item zh" href="https://docs.covalent.ai/quick-start/">快速开始</a>
                             <a class="dropdown-item zh" href="https://testnet-faucet.covalent.ai">测试网络 Faucet</a>
                             <a class="dropdown-item zh" href="https://docs.covalent.ai/report-join/">开发者指南</a>
@@ -367,6 +371,85 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row announcement_row">
+            <div class="col-md-12">
+                <div class="announcement_slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://finance.yahoo.com/news/cova-welcomes-harvard-professors-board-054600772.html">COVA Welcomes Harvard Professors to Its Board of Advisors</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle announcement_subtitle_align_bottom">Yahoo! Finance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://www.coinspeaker.com/led-by-iost-bluehill-and-fbg-capital-cova-is-rolling-out-internet-2-0/">Led by IOST/Bluehill and FBG Capital, COVA is Rolling Out ‘Internet 2.0’</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle">Coinspeaker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://www.morningstar.com/news/access-wire/ASW_Accesswire_510374MSN/cova-tries-to-upgrade-the-internet-with-smart-data.html">'COVA' Tries to Upgrade the Internet with &nbsp; 'Smart Data'</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle">Morningstar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://www.leiphone.com/news/201807/iFfGM4rO6qmi8FOR.html">要做区块链时代的推动者，Covalent 让数据真正流通起来</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle">雷锋网</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://36kr.com/newsflashes/125213">Covalent获千万美金投资，真格基金、节点资本参投</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle">36氪</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="announcement_item animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+                            <div class="announcement_content">
+                                <div class="announcement_text">
+                                    <h6 class="announcement_title"><a
+                                            href="https://www.jinse.com/lives/65777.htm">COVA 入围火币创业板第二期项目名单</a>
+                                    </h6>
+                                    <span class="text-capitalize announcement_subtitle">金色财经</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1508,11 +1591,11 @@ computed_result = DataUserCodeExecute(data_hash,
             $('.' + lang).show();
             $('.' + op_lang).hide();
             /*if (lang === 'us') {
-                $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
-            }
-            else {
-                $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
-            }*/
+             $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
+             }
+             else {
+             $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
+             }*/
         });
 
         /*$.get("http://ipinfo.io", function (response) {
@@ -1569,7 +1652,83 @@ computed_result = DataUserCodeExecute(data_hash,
             }
         })
 
+        /* OWL CAROUSEL CUSTOM STYLE */
+        $(".announcement_slider").owlCarousel({
+            loop: true,
+
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            dots: false,
+            responsiveClass: true,
+            smartSpeed:450,
+            margin: 10,
+            nav: true,
+            navText: ["<i style='font-size: 1.5rem;' class='fas fa-angle-left'></i>", "<i  style='font-size: 1.5rem;' class='fas fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: true
+                },
+                1000: {
+                    items: 3,
+                    nav: true,
+                    loop: true
+                }
+            }
+        });
+
+        console.log($(".announcement_item").outerHeight(true));
+
+
     });
+
+    /* EQUAL HEIGHT ANNOUNCEMENT ITEM */
+    (function($){
+        function fixButtonHeights() {
+            var heights = new Array();
+            console.log("Fixing all heights");
+
+            // Loop to get all element heights
+            $('.announcement_content').each(function() {
+                // Need to let sizes be whatever they want so no overflow on resize
+                $(this).css('min-height', '0');
+                $(this).css('max-height', 'none');
+                $(this).css('height', 'auto');
+
+                // Then add size (no units) to array
+                heights.push($(this).height());
+            });
+
+            // Find max height of all elements
+            var max = Math.max.apply( Math, heights );
+
+            // Set all heights to max height
+            $('.announcement_content').each(function() {
+                $(this).css('height', max + 'px');
+                // Note: IF box-sizing is border-box, would need to manually add border and padding to height (or tallest element will overflow by amount of vertical border + vertical padding)
+            });
+        }
+
+        $(window).load(function() {
+            // Fix heights on page load
+            fixButtonHeights();
+
+            // Fix heights on window resize
+            $(window).resize(function() {
+                // Needs to be a timeout function so it doesn't fire every ms of resize
+                setTimeout(function() {
+                    fixButtonHeights();
+                }, 120);
+            });
+        });
+    })(jQuery);
+
+
 </script>
 </body>
 </html>

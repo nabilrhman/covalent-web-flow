@@ -136,10 +136,15 @@
 
 /* HEADING SOCIAL ICONS */
 
-/*.heading-icons-row
+.heading-icons-row
 {
     position: relative;
     z-index: -1;
+}
+
+.heading-icons-column
+{
+    min-width: 320px !important;
 }
 
 .heading-icons li {
@@ -168,17 +173,17 @@
 
 .heading-icons li {
     float: left;
-    min-width: 50px !important;
-    width: 5.3%;
-
+    width: 16.6% !important;
+    min-width: 50px;
 }
+
 .heading-icons li i {
     background-color: #0097a7;
     border: 0 none;
     display: inline-block;
     float: none;
     margin-bottom: 10px;
-}*/
+}
 
 /*===================================*
 01. HEADING SECTION STYLE ENDS
@@ -368,6 +373,20 @@ a {
 .animate-hover-grow:active
 {
     transform: scale(1.05);
+}
+
+.animate-hover-grow-big
+{
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.animate-hover-grow-big:hover,
+.animate-hover-grow-big:focus,
+.animate-hover-grow-big:active
+{
+    transform: scale(1.15);
 }
 
 .media_subtitle

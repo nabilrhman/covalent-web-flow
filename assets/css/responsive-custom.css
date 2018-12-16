@@ -55,6 +55,19 @@
 }
 
 /* -------------------------------------------------
+  max-width: 991px
+---------------------------------------------------*/
+@media only screen and (max-width: 991px)
+{
+    /* FIXES HEADING ICONS CENTERING ISSUE FOR SMALLER SCREEN */
+    .heading-icons-column
+    {
+        padding-left: 0px !important;
+    }
+}
+
+
+/* -------------------------------------------------
   max-width: 767px
 ---------------------------------------------------*/
 @media only screen and (max-width: 767px)
@@ -68,6 +81,7 @@
 @media only screen and (max-width: 640px)
 {
 
+
 }
 
 /* -------------------------------------------------
@@ -80,6 +94,12 @@
     {
         width: 278px !important;
         text-align: center;
+    }
+
+    /* FIXES HEADING ICONS CENTERING ISSUE FOR SMALLER SCREEN */
+    .heading-icons-column
+    {
+        padding-left: 0px;
     }
 }
 
@@ -95,6 +115,12 @@
         font-size: 14px;
         text-align: center;
     }
+
+    /* FIXES HEADING ICONS CENTERING ISSUE FOR SMALLER SCREEN */
+    .heading-icons-column
+    {
+        padding-left: 0px;
+    }
 }
 
 /* -------------------------------------------------
@@ -102,5 +128,6 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 380px)
 {
+
 
 }

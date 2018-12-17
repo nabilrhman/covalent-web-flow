@@ -1333,8 +1333,63 @@ computed_result = DataUserCodeExecute(data_hash,
             </div>
         </div>
     </div>
+    <div class="medium_divider"></div>
 </section>
 <!-- END BACKED BY SECTION -->
+
+
+<!-- START COVA TOKEN SECTION -->
+<section class="section_team" data-bleed="-40" data-z-index="1" data-parallax="scroll"
+         data-image-src="assets/images/banner_bg3.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="title_default_dark title_border">
+                    <h4 class="animation us" data-animation="fadeInUp"
+                        data-animation-delay="0.2s">COVA Token Metrics (%)</h4>
+                    <h4 class="animation zh" data-animation="fadeInUp" data-animation-delay="0.2s">技术团队 (%)</h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="title_default_dark title_border">
+                    <p class="us">
+                        <strong>Private sale (20%)</strong><br>
+                        Primarily for long-term project funding
+                        <br><br>
+                        <strong>Team (15%)</strong><br>
+                        Incentive for top developer hires and the founding team
+                        <br><br>
+                        <strong>Foundation Reserve (10%)</strong><br>
+                        For marketing, PR, and business development
+                        <br><br>
+                        <strong>Huobi NEXT (4%)</strong><br>
+                        Voting rewards distributed to voters as incentives
+                        <br><br>
+                        <strong>Block Rewards (28%)</strong><br>
+                        Incentive for computing and routing nodes to join computations
+                        <br><br>
+                        <strong>Ecosystem (16%)</strong><br>
+                        Post main-net release ecosystem building reward for the community
+                        <br><br>
+                        <strong>Advisor (7%)</strong><br>
+                        Incentives for the world-leading experts in related fields
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 ">
+                <div class="title_default_dark">
+                <canvas id="myChart_us" class="us animation" data-animation="fadeInRight" data-animation-delay="0.2s"></canvas>
+                <canvas id="myChart_zh" class="zh"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END COVA TOKEN SECTION -->
 
 <!-- START CONTACT SECTION -->
 <section id="contact" class="contact_section" data-parallax="scroll" data-image-src="assets/images/app_bg.png">
@@ -1574,88 +1629,15 @@ computed_result = DataUserCodeExecute(data_hash,
 <!-- Prism.js -->
 <script src="assets/js/prism.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
 <script>
     $(document).ready(function () {
-        $('.zh').hide();
-        var lang;
 
-        $(".nav_item").click(function (e) {
-            $(".nav_item").removeClass('active');
-            $target = $(event.target);
-            $target.addClass('active');
-        });
-
-        $("#lng_select").change(function () {
-            lang = $('#lng_select').val();
-            var op_lang = lang == 'zh' ? 'us' : 'zh';
-            $('.' + lang).show();
-            $('.' + op_lang).hide();
-            /*if (lang === 'us') {
-             $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
-             }
-             else {
-             $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
-             }*/
-        });
-
-        /*$.get("http://ipinfo.io", function (response) {
-         if(response.country.toLowerCase() == "cn")
-         {
-         $('#lng_select').val('zh');
-         var lang = $('#lng_select').val();
-         var op_lang = lang == 'zh' ? 'us' : 'zh';
-         $('.' + lang).show();
-         $('.' + op_lang).hide();
-         if (lang === 'us') {
-         $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
-         }
-         else {
-         $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
-         }
-         }
-         }, "jsonp");*/
-
-        // for nav highlight
-
-        // Cache selectors
-        var topMenu = $("#navbarSupportedContent"),
-            topMenuHeight = topMenu.outerHeight() + 15,
-            // All list items
-            menuItems = topMenu.find("a"),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function () {
-                var item = $($(this).attr("href"));
-                if (item.length) {
-                    return item;
-                }
-            });
-
-
-        $(window).scroll(function () {
-            var fromTop = $(this).scrollTop() + topMenuHeight;
-            var cur = scrollItems.map(function () {
-                if ($(this).offset().top < fromTop)
-                    return this;
-            });
-
-            cur = cur[cur.length - 1];
-            var id = cur && cur.length ? cur[0].id : "";
-            // console.log(id);
-            $(".nav_item").removeClass('active');
-            // Set/remove active class
-            // console.log(menuItems);
-            if (lang === 'zh') {
-                $("#" + id + "_nav_zh").addClass('active');
-            }
-            else {
-                $("#" + id + "_nav").addClass('active');
-            }
-        })
-
+        drawEnglishChart();
         /* OWL CAROUSEL CUSTOM STYLE */
         $(".announcement_slider").owlCarousel({
             loop: true,
-
             autoplay: true,
             autoplayTimeout: 6000,
             autoplayHoverPause: true,
@@ -1682,7 +1664,88 @@ computed_result = DataUserCodeExecute(data_hash,
             }
         });
 
-        console.log($(".announcement_item").outerHeight(true));
+        $('.zh').hide();
+        var lang;
+        $(".nav_item").click(function (e) {
+            console.log(event.target.id);
+            if(event.target.id === 'testnet_nav' || event.target.id === 'testnet_nav_zh'){
+                location.replace("https://docs.covalent.ai");
+            } else if (event.target.id === 'covachain_nav' || event.target.id === 'covachain_nav_zh') {
+                location.replace("http://blocks.covalent.ai:3000");
+            }
+            else {
+                $(".nav_item").removeClass('active');
+                $target = $(event.target);
+                $target.addClass('active');
+            }
+
+        });
+
+        $("#lng_select").change(function () {
+            lang = $('#lng_select').val();
+            var op_lang = lang == 'zh' ? 'us' : 'zh';
+            $('.' + lang).show();
+            $('.' + op_lang).hide();
+            if (lang === 'us') {
+                drawEnglishChart();
+                $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
+            }
+            else {
+                drawChineseChart();
+                $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
+            }
+        });
+
+        /*$.get("http://ipinfo.io", function (response) {
+         if(response.country.toLowerCase() == "cn")
+         {
+         $('#lng_select').val('zh');
+         var lang = $('#lng_select').val();
+         var op_lang = lang == 'zh' ? 'us' : 'zh';
+         $('.' + lang).show();
+         $('.' + op_lang).hide();
+         if (lang === 'us') {
+         $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
+         }
+         else {
+         $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
+         }
+         }
+         }, "jsonp");*/
+
+        // for nav highlight
+
+        // Cache selectors
+        var topMenu = $("#navbarSupportedContent"),
+            topMenuHeight = topMenu.outerHeight()+15,
+            // All list items
+            menuItems = topMenu.find("a"),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+                var link_selector = $($(this).attr("id")).selector;
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+            }).filter(item => item.selector !== 'https://docs.covalent.ai');
+
+        $(window).scroll(function(){
+            var fromTop = $(this).scrollTop()+topMenuHeight;
+            var cur = scrollItems.map(function(){
+                if ($(this).offset().top < fromTop)
+                    return this;
+            });
+
+            cur = cur[cur.length-1];
+            // cur[0].id !== 'testnet_nav' || cur[0].id !== 'testnet_nav_zh' || cur[0].id !== 'covachain_nav' || cur[0].id !== 'covachain_nav_zh')
+            var id = cur && cur.length? cur[0].id : "";
+            $(".nav_item").removeClass('active');
+            // Set/remove active class
+            // console.log(menuItems);
+            if(lang === 'zh'){
+                $("#" + id + "_nav_zh").addClass('active');
+            } else {
+                $("#" + id + "_nav").addClass('active');
+            }
+        });
 
 
     });
@@ -1727,6 +1790,150 @@ computed_result = DataUserCodeExecute(data_hash,
             });
         });
     })(jQuery);
+
+    function drawChineseChart(){
+        Chart.defaults.global.defaultFontFamily = 'Poppins, sans-serif', Chart.defaults.global.defaultFontColor = "#292b2c";
+        var ctx = document.getElementById('myChart_us').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
+            // The data for our dataset
+            data: {
+
+                datasets: [{
+                    data: [20, 15, 10, 4, 28, 16, 7],
+                    backgroundColor: ['#ba76d8', '#80539c', '#36feac', '#23a973', '#3b8a99', '#275d66', '#8b3954'],
+                    borderColor: [
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                    ],
+                    borderWidth: 0,
+                    label: 'Token metrics'
+                }],
+
+                labels: ["私募投资", "团队", "运营", "火币创业板投票激励", "区块链奖励", "生态建设", "顾问"],
+
+            },
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+                legend: {
+                    display: true,
+                    position: "left",
+                },
+                title: {
+                    display: false,
+                    text: 'Token Metrics (%)'
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: ['#ba76d8', '#80539c', '#36feac', '#23a973', '#3b8a99', '#275d66', '#8b3954'],
+                    fontSize: 16,
+                    fontStyle: 'bold',
+                    position: 'outside',
+                    precision: 2
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var dataset = data.datasets[tooltipItem.datasetIndex];
+                            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                return previousValue + currentValue;
+                            });
+                            var currentValue = dataset.data[tooltipItem.index];
+                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+                            return data.labels[tooltipItem.index] + ": " + percentage + "%";
+                        }
+                    }
+                }
+            },
+
+
+        });
+
+    }
+
+    function drawEnglishChart(){
+        Chart.defaults.global.defaultFontFamily = 'Poppins, sans-serif', Chart.defaults.global.defaultFontColor = "#292b2c";
+        var ctx = document.getElementById('myChart_us').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
+            // The data for our dataset
+            data: {
+
+                datasets: [{
+                    data: [20, 15, 10, 4, 28, 16, 7],
+                    backgroundColor: ['#ba76d8', '#80539c', '#36feac', '#23a973', '#3b8a99', '#275d66', '#8b3954'],
+                    borderColor: [
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                        'rgba(255,255,255,0.5)',
+                    ],
+                    borderWidth: 0,
+                    label: 'Token metrics'
+                }],
+
+                labels: ["Private Sale", "Team", "Reserve", "Huobi Next", "Block Reward", "Ecosystem", "Advisor"],
+
+            },
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+                legend: {
+                    display: true,
+                    position: "left",
+                },
+                title: {
+                    display: false,
+                    text: 'Token Metrics (%)'
+                },
+                pieceLabel: {
+                    render: 'percentage',
+                    fontColor: ['#ba76d8', '#80539c', '#36feac', '#23a973', '#3b8a99', '#275d66', '#8b3954'],
+                    fontSize: 16,
+                    fontStyle: 'bold',
+                    position: 'outside',
+                    precision: 2
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var dataset = data.datasets[tooltipItem.datasetIndex];
+                            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                return previousValue + currentValue;
+                            });
+                            var currentValue = dataset.data[tooltipItem.index];
+                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+                            return data.labels[tooltipItem.index] + ": " + percentage + "%";
+                        }
+                    }
+                }
+            },
+
+
+        });
+
+    }
 
 
 </script>

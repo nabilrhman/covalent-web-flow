@@ -9,6 +9,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -23,6 +28,11 @@
     .cova_logo_subtitle_banner
     {
         padding-bottom: 1.4rem !important;
+    }
+
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
     }
 
     .announcement_item {
@@ -42,6 +52,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -59,6 +74,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -74,6 +94,11 @@
     .cova_logo_subtitle_banner
     {
         padding-bottom: 1.4rem !important;
+    }
+
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
     }
 
     .announcement_item {
@@ -94,6 +119,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -109,6 +139,11 @@
     .cova_logo_subtitle_banner
     {
         padding-bottom: 1.4rem !important;
+    }
+
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
     }
 
     .announcement_item {
@@ -133,6 +168,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -150,6 +190,11 @@
         padding-bottom: 1.4rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
+    }
+
     .announcement_item {
 
         margin-top: 8px;
@@ -165,6 +210,11 @@
     .cova_logo_subtitle_banner
     {
         padding-bottom: 1.4rem !important;
+    }
+
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1.3rem
     }
 
     .announcement_item {
@@ -197,13 +247,19 @@
         padding-bottom: 1rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1rem
+    }
+
     .heading-icons-wrapper
     {
-        padding-top: 0.1rem !important;
+        padding-top: 0.6rem !important;
     }
 
     .heading-icons li i {
         margin-bottom: 0px !important; ;
+        margin-top: 5px;
     }
 }
 
@@ -235,13 +291,19 @@
         padding-bottom: 1rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1rem
+    }
+
     .heading-icons-wrapper
     {
-        padding-top: 0.1rem !important;
+        padding-top: 0.6rem !important;
     }
 
     .heading-icons li i {
         margin-bottom: 0px !important;
+        margin-top: 5px;
     }
 }
 
@@ -255,13 +317,24 @@
         padding-bottom: 1rem !important;
     }
 
+    .cova_graphical_logo_big
+    {
+        padding-bottom: 1rem
+    }
+
     .heading-icons-wrapper
     {
-        padding-top: 0.1rem !important;
+        padding-top: 0.6rem !important;
     }
 
     .heading-icons li i {
         margin-bottom: 0px !important;
+    }
+
+    .btn_group .btn {
+        margin: 0px 0;
+/*        margin-right: 0px;
+        margin-bottom: 5px;*/
     }
 }
 

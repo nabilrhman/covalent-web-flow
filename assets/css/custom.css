@@ -25,7 +25,6 @@
 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 18px !important;
     text-transform: uppercase;
     font-weight: 500 !important;
 }
@@ -35,7 +34,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: normal !important;
-    font-size: 16px !important;
     text-transform: uppercase;
 
 }
@@ -43,18 +41,18 @@
 .cova_logo_subtitle_text
 {
 
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 5px;
     border-color: #0097A7;
 }
 
-.cova_logo_subtitle_text:hover
+/*.cova_logo_subtitle_text:hover
 {
 
     border-bottom: 1px solid;
     transition: .5s all ease;
     -webkit-transition: .5s all ease;
-}
+}*/
 
 .header-play-icon
 {
@@ -173,10 +171,10 @@
     color: #ffffff;
     float: left;
     font-size: 26px;
-    height: 46px;
-    line-height: 46px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    width: 46px;
+    width: 30px;
 }
 
 .heading-icons {
@@ -195,7 +193,7 @@
     border: 0 none;
     display: inline-block;
     float: none;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
 }
 
 /* ANNOUNCEMENT STRIP */
@@ -213,7 +211,7 @@
     width: 99.6%;
 }
 .announcement_text {
-    padding: 15px;
+    padding: 10px;
 }
 
 .announcement_title {

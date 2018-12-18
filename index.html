@@ -171,7 +171,7 @@
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="0.7s">
                         <div class="lng_dropdown">
                             <select name="countries" id="lng_select">
-                                <option value='us' data-image="assets/images/eng_flage.png" data-title="United States">EN
+                                <option value='us' data-image="assets/images/eng_flage.png" data-title="United States">ENG
                                 </option>
                                 <option value='zh' data-image="assets/images/chn_flage.png" data-title="China">中文
                                 </option>
@@ -573,7 +573,8 @@
         <div class="divider very_small_divider"></div>
         <div class="row align-items-center mt-4">
             <div class="col-lg-5 col-md-12 col-sm-12">
-                <div class="text-center animation" data-animation="fadeInLeft" data-animation-delay="0.2s">
+                <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInRight"
+                     data-animation-delay="0.2s">
                     <img src="assets/images/about_img5.png" alt="diagram"/>
                 </div>
             </div>
@@ -610,7 +611,6 @@
 </section>
 <!-- END DATA CONTROL SECTION -->
 
-
 <!-- START TECHNOLOGY SECTION -->
 <section id="tech" class="section_token blue_light_bg" data-z-index="1" data-bleed="-40" data-parallax="scroll"
          data-image-src="assets/images/token_bg.png">
@@ -645,7 +645,9 @@
 <!-- START CENTRIFUGE SECTION -->
 <section class="about_shape_bg">
     <div class="container">
+
         <div class="row align-items-center">
+
             <div class="col-lg-12 col-md-12 col-sm-12 pb-5">
                 <div class="title_default_dark title_border">
                     <h4 class="animation us" data-animation="fadeInUp"
@@ -654,9 +656,23 @@
                         为智能条款而生的程序语言
                     </h4> -->
                 </div>
-                <img class="animation" data-animation="fadeInDown"data-animation-delay="0.2s" src="assets/images/layers.png">
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 img_md_hide img_lg_show">
+                <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInRight"
+                     data-animation-delay="0.2s">
+                    <img src="assets/images/layers.png">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide">
+                <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInRight"
+                     data-animation-delay="0.2s">
+                    <img src="assets/images/layers_md.png" style="max-width: 350px;">
+                </div>
             </div>
         </div>
+
+        <div class="divider medium_divider"></div>
 
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1418,8 +1434,8 @@ computed_result = DataUserCodeExecute(data_hash,
             </div>
             <div class="col-lg-6 col-md-12 ">
                 <div class="title_default_dark">
-                <canvas id="myChart_us" class="us animation" data-animation="fadeIn" data-animation-delay="0.2s"></canvas>
-                <canvas id="myChart_zh" class="zh animation" data-animation="fadeIn" data-animation-delay="0.2s"></canvas>
+                <canvas id="myChart_us" class="us"></canvas>
+                <canvas id="myChart_zh" class="zh"></canvas>
                 </div>
             </div>
         </div>
@@ -1673,22 +1689,20 @@ computed_result = DataUserCodeExecute(data_hash,
 
         $('#myChart_us').isInViewport(function (status) {
             if (status === 'entered') {
-                drawEnglishChart();
-            }
-            else
-            {
-                console.log("isInViewport: false");
+
+                    drawEnglishChart();
+
+
             }
 
         });
 
         $('#myChart_zh').isInViewport(function (status) {
             if (status === 'entered') {
-                drawChineseChart();
-            }
-            else
-            {
-                console.log("isInViewport: false");
+
+                    drawChineseChart();
+
+
             }
 
         });

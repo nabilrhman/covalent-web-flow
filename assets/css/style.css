@@ -1390,7 +1390,8 @@ header a:hover,
 .section_banner {
 	background-position: left bottom;
 	background-size: cover;
-	padding: 200px 0 100px;
+	padding: 150px 0 100px;
+	/*padding: 200px 0 100px;*/
 	position: relative;
 	overflow:hidden;
 }

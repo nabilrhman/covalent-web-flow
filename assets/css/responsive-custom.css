@@ -4,6 +4,15 @@
 @media (min-width: 1200px)
 {
 
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 }
 
 /* -------------------------------------------------
@@ -11,6 +20,15 @@
 ---------------------------------------------------*/
 @media only screen and (min-width: 991px) and (max-width: 1199px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -19,6 +37,15 @@
 ---------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -27,6 +54,15 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 1600px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -35,6 +71,15 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 1440px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -44,6 +89,15 @@
 @media only screen and (max-width: 1199px)
 {
 
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 }
 
 /* -------------------------------------------------
@@ -52,6 +106,15 @@
 @media only screen and (min-width: 991px)
 {
 
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 }
 
 /* -------------------------------------------------
@@ -64,6 +127,16 @@
     {
         padding-left: 0px !important;
     }
+
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 }
 
 
@@ -72,6 +145,15 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 767px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
+
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -80,7 +162,15 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 640px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1.4rem !important;
+    }
 
+    .announcement_item {
+
+        margin-top: 8px;
+    }
 
 }
 
@@ -100,6 +190,20 @@
     .heading-icons-column
     {
         padding-left: 0px;
+    }
+
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1rem !important;
+    }
+
+    .heading-icons-wrapper
+    {
+        padding-top: 0.1rem !important;
+    }
+
+    .heading-icons li i {
+        margin-bottom: 0px !important; ;
     }
 }
 
@@ -121,6 +225,24 @@
     {
         padding-left: 0px;
     }
+
+    .announcement_text a {
+        font-size: 14px;
+    }
+
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1rem !important;
+    }
+
+    .heading-icons-wrapper
+    {
+        padding-top: 0.1rem !important;
+    }
+
+    .heading-icons li i {
+        margin-bottom: 0px !important;
+    }
 }
 
 /* -------------------------------------------------
@@ -128,6 +250,26 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 380px)
 {
+    .cova_logo_subtitle_banner
+    {
+        padding-bottom: 1rem !important;
+    }
 
+    .heading-icons-wrapper
+    {
+        padding-top: 0.1rem !important;
+    }
+
+    .heading-icons li i {
+        margin-bottom: 0px !important;
+    }
+}
+
+/* -------------------------------------------------
+  min-width: 380px
+---------------------------------------------------*/
+@media only screen and (min-width: 380px)
+{
 
 }
+

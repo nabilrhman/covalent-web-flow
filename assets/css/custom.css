@@ -2,6 +2,15 @@
 01. HEADING SECTION STYLE STARTS
 *===================================*/
 
+/*.section_banner !* FIX FOR MOBILE VERSION PADDING TOP *!
+{
+    background-position: left bottom;
+    background-size: cover;
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}*/
+
 .cova_logo_big
 {
     max-width: 360px;
@@ -252,7 +261,7 @@
 .announcement_item {
     border-radius: 10px;
     /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
-    margin-top: 8px;
+    /*margin-top: 8px;*/
 }
 
 .announcement_meta li {
@@ -327,14 +336,6 @@
 /* DECREASE THE DEFAULT BOTTOM PADDING FOR THE HEADER */
 .section_banner.banner_shape {
     padding-bottom: 150px;
-}
-
-.section_banner {
-    background-position: left bottom;
-    background-size: cover;
-    padding: 150px 0 100px;
-    position: relative;
-    overflow: hidden;
 }
 
 /*===================================*

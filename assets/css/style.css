@@ -326,7 +326,7 @@ button:focus {
 	background-color: #3e1084;
 }
 .large_divider {
-	height:100px !important;
+	height:100px;
 }
 .small_divider {
 	height:50px;

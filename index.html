@@ -171,7 +171,8 @@
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="0.7s">
                         <div class="lng_dropdown">
                             <select name="countries" id="lng_select">
-                                <option value='us' data-image="assets/images/eng_flage.png" data-title="United States">ENG
+                                <option value='us' data-image="assets/images/eng_flage.png"
+                                        data-title="United States">ENG
                                 </option>
                                 <option value='zh' data-image="assets/images/chn_flage.png" data-title="China">中文
                                 </option>
@@ -707,12 +708,8 @@
                         通过编写智能条款（Smart Policy），强制使用者采用 k-匿名性（k-anonymity） 或差分隐私（Differential Privacy），数据拥有者可以可以限制他人对于数据的更改、破坏。
                     </p>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                    <pre class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
-                            class="language-python"># Create smart data
-smart_data = DataOwnerFileProcessor(file_path, policies).run()
-
-# Register smart data on COVA
-DataOwnerSecretUploader(smart_data, download_link).run()</code></pre>
+                    <pre id="preSmartData"class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
+                            id="codeCreateSmartData" class="language-python"></code></pre>
                     </p>
 
 
@@ -731,11 +728,8 @@ DataOwnerSecretUploader(smart_data, download_link).run()</code></pre>
                         由于存在多种解决方案，目前的数字版权管理（DRM）生态极为混乱。大多数字版权管理政策具有限制性强、不透明、捆绑于数据等特点，这大大加剧其使用难度。
                         开放的 COVA 协议，使得数据所有者可以编写透明的智能条款作为数据使用政策。该政策不会破坏数据本身，且失败率极低。
                     </p>
-                    <pre class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
-                            class="language-python"># Utilize smart data with policy
-computed_result = DataUserCodeExecute(data_hash,
- eth_pub_key, eth_private_key,
- timeout, code_file_path).run()</code></pre>
+                    <pre id="prePolicy"class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
+                            id="codeCreatePolicy" class="language-python"></code></pre>
                     </p>
 
                 </div>
@@ -1429,8 +1423,8 @@ computed_result = DataUserCodeExecute(data_hash,
             </div>
             <div class="col-lg-6 col-md-12 ">
                 <div class="title_default_dark">
-                <canvas id="myChart_us" class="us"></canvas>
-                <canvas id="myChart_zh" class="zh"></canvas>
+                    <canvas id="myChart_us" class="us"></canvas>
+                    <canvas id="myChart_zh" class="zh"></canvas>
                 </div>
             </div>
         </div>
@@ -1673,19 +1667,113 @@ computed_result = DataUserCodeExecute(data_hash,
 <script src="assets/js/jquery.dd.min.js"></script>
 <!-- scripts js -->
 <script src="assets/js/scripts.js"></script>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
 <!-- Prism.js -->
 <script src="assets/js/prism.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="assets/js/isInViewport.jquery.js"></script>
 
 <script>
+
+    function createAnimatedTypedCode(code, text, after, newElementId, callback, typeSpeed) {
+        $(code).insertAfter(after);
+
+        if (typeSpeed !== undefined) {
+
+        }
+        else {
+            // argument not passed or undefined
+            typeSpeed = 40;
+        }
+        var options = {
+            strings: [text],
+            typeSpeed: typeSpeed,
+            cursorChar: '_',
+            onComplete: (self) => {
+                if (callback !== undefined) {
+                    callback();
+                }
+                else {
+                    // argument not passed or undefined
+                }
+
+                $("#prePolicy").find("span.typed-cursor").slice(1).hide();
+                $("#preSmartData").find("span.typed-cursor").slice(1).hide();
+
+
+            }
+        }
+
+        var typed = new Typed(newElementId, options);
+    }
+
+    function createSmartDataCode() {
+        createAnimatedTypedCode("<br><code id='codeCreateSmartDataCode' class='language-python'></code>", "smart_data = DataOwnerFileProcessor(file_path, policies).run()^1000", "#codeCreateSmartDataComment", "#codeCreateSmartDataCode", createSmartDataSuccess);
+    }
+
+    function createSmartDataSuccess()
+    {
+        createAnimatedTypedCode("<br><br><code id='codeCreateSmartDataSuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA CREATED^1000", "#codeCreateSmartDataCode", "#codeCreateSmartDataSuccess", createRegisterComment, 0);
+    }
+
+    function createRegisterComment()
+    {
+        createAnimatedTypedCode("<br><br><code id='codeCreateRegisterComment' class='language-python' style='color: slategray;'></code>", "# Register smart data on COVA^1000", "#codeCreateSmartDataSuccess", "#codeCreateRegisterComment", createRegisterCode);
+
+    }
+
+    function createRegisterCode()
+    {
+        createAnimatedTypedCode("<br><code id='codeCreateRegisterCode' class='language-python'></code>", "DataOwnerSecretUploader(smart_data, download_link).run()^1000", "#codeCreateRegisterComment", "#codeCreateRegisterCode", createRegisterSuccess);
+
+    }
+
+    function createRegisterSuccess()
+    {
+        createAnimatedTypedCode("<br><br><code id='codeCreateRegisterSuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA REGISTERED^1000", "#codeCreateRegisterCode", "#codeCreateRegisterSuccess", undefined, 0);
+
+    }
+
+    function createPolicyComment()
+    {
+        createAnimatedTypedCode("<code id='codeCreatePolicyComment' class='language-python' style='color: slategray;'></code>", "^5000# Utilize smart data with policy^1000", "#codeCreatePolicy", "#codeCreatePolicyComment", createPolicyCode);
+
+    }
+
+    function createPolicyCode()
+    {
+        createAnimatedTypedCode("<br><code id='codeCreatePolicyCode' class='language-python'></code>", "computed_result = DataUserCodeExecute(data_hash,\n eth_pub_key, eth_private_key,\n timeout, code_file_path).run()^1000", "#codeCreatePolicyComment", "#codeCreatePolicyCode", createPolicySuccess);
+
+    }
+
+    function createPolicySuccess()
+    {
+        createAnimatedTypedCode("<br><br><code id='codeCreatePolicySuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA SECURED WITH POLICY^1000", "#codeCreatePolicyCode", "#codeCreatePolicySuccess", undefined, 0);
+
+    }
+
+
     $(document).ready(function () {
+
+        /*TYPED ANIMATION STARTS*/
+
+        createAnimatedTypedCode("<code id='codeCreateSmartDataComment' class='language-python' style='color: slategray;'></code>", "^5000# Create smart data^1000", "#codeCreateSmartData", "#codeCreateSmartDataComment", createSmartDataCode);
+        createPolicyComment();
+
+        //createCommentTypedAnim();
+
+
+        /*TYPED ANIMATION ENDS*/
 
         $('#myChart_us').isInViewport(function (status) {
             if (status === 'entered') {
 
-                    drawEnglishChart();
+                drawEnglishChart();
 
 
             }
@@ -1695,7 +1783,7 @@ computed_result = DataUserCodeExecute(data_hash,
         $('#myChart_zh').isInViewport(function (status) {
             if (status === 'entered') {
 
-                    drawChineseChart();
+                drawChineseChart();
 
 
             }
@@ -1713,7 +1801,7 @@ computed_result = DataUserCodeExecute(data_hash,
             autoplayHoverPause: true,
             dots: false,
             responsiveClass: true,
-            smartSpeed:450,
+            smartSpeed: 450,
             margin: 10,
             nav: true,
             navText: ["<i style='font-size: 1.5rem;' class='fas fa-angle-left'></i>", "<i  style='font-size: 1.5rem;' class='fas fa-angle-right'></i>"],
@@ -1738,9 +1826,10 @@ computed_result = DataUserCodeExecute(data_hash,
         var lang;
         $(".nav_item").click(function (e) {
             console.log(event.target.id);
-            if(event.target.id === 'testnet_nav' || event.target.id === 'testnet_nav_zh'){
+            if (event.target.id === 'testnet_nav' || event.target.id === 'testnet_nav_zh') {
                 location.replace("https://docs.covalent.ai");
-            } else if (event.target.id === 'covachain_nav' || event.target.id === 'covachain_nav_zh') {
+            }
+            else if (event.target.id === 'covachain_nav' || event.target.id === 'covachain_nav_zh') {
                 location.replace("http://blocks.covalent.ai:3000");
             }
             else {
@@ -1787,32 +1876,35 @@ computed_result = DataUserCodeExecute(data_hash,
 
         // Cache selectors
         var topMenu = $("#navbarSupportedContent"),
-            topMenuHeight = topMenu.outerHeight()+15,
+            topMenuHeight = topMenu.outerHeight() + 15,
             // All list items
             menuItems = topMenu.find("a"),
             // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function(){
+            scrollItems = menuItems.map(function () {
                 var link_selector = $($(this).attr("id")).selector;
                 var item = $($(this).attr("href"));
-                if (item.length) { return item; }
+                if (item.length) {
+                    return item;
+                }
             }).filter(item => item.selector !== 'https://docs.covalent.ai');
 
-        $(window).scroll(function(){
-            var fromTop = $(this).scrollTop()+topMenuHeight;
-            var cur = scrollItems.map(function(){
+        $(window).scroll(function () {
+            var fromTop = $(this).scrollTop() + topMenuHeight;
+            var cur = scrollItems.map(function () {
                 if ($(this).offset().top < fromTop)
                     return this;
             });
 
-            cur = cur[cur.length-1];
+            cur = cur[cur.length - 1];
             // cur[0].id !== 'testnet_nav' || cur[0].id !== 'testnet_nav_zh' || cur[0].id !== 'covachain_nav' || cur[0].id !== 'covachain_nav_zh')
-            var id = cur && cur.length? cur[0].id : "";
+            var id = cur && cur.length ? cur[0].id : "";
             $(".nav_item").removeClass('active');
             // Set/remove active class
             // console.log(menuItems);
-            if(lang === 'zh'){
+            if (lang === 'zh') {
                 $("#" + id + "_nav_zh").addClass('active');
-            } else {
+            }
+            else {
                 $("#" + id + "_nav").addClass('active');
             }
         });
@@ -1822,13 +1914,13 @@ computed_result = DataUserCodeExecute(data_hash,
 
 
     /* EQUAL HEIGHT ANNOUNCEMENT ITEM */
-    (function($){
+    (function ($) {
         function fixButtonHeights() {
             var heights = new Array();
             console.log("Fixing all heights");
 
             // Loop to get all element heights
-            $('.announcement_content').each(function() {
+            $('.announcement_content').each(function () {
                 // Need to let sizes be whatever they want so no overflow on resize
                 $(this).css('min-height', '0');
                 $(this).css('max-height', 'none');
@@ -1839,30 +1931,30 @@ computed_result = DataUserCodeExecute(data_hash,
             });
 
             // Find max height of all elements
-            var max = Math.max.apply( Math, heights );
+            var max = Math.max.apply(Math, heights);
 
             // Set all heights to max height
-            $('.announcement_content').each(function() {
+            $('.announcement_content').each(function () {
                 $(this).css('height', max + 'px');
                 // Note: IF box-sizing is border-box, would need to manually add border and padding to height (or tallest element will overflow by amount of vertical border + vertical padding)
             });
         }
 
-        $(window).load(function() {
+        $(window).load(function () {
             // Fix heights on page load
             fixButtonHeights();
 
             // Fix heights on window resize
-            $(window).resize(function() {
+            $(window).resize(function () {
                 // Needs to be a timeout function so it doesn't fire every ms of resize
-                setTimeout(function() {
+                setTimeout(function () {
                     fixButtonHeights();
                 }, 120);
             });
         });
     })(jQuery);
 
-    function drawChineseChart(){
+    function drawChineseChart() {
         Chart.defaults.global.defaultFontFamily = 'Poppins, sans-serif', Chart.defaults.global.defaultFontColor = "#292b2c";
         var ctx = document.getElementById('myChart_zh').getContext('2d');
         var chart = new Chart(ctx, {
@@ -1916,13 +2008,13 @@ computed_result = DataUserCodeExecute(data_hash,
                 },
                 tooltips: {
                     callbacks: {
-                        label: function(tooltipItem, data) {
+                        label: function (tooltipItem, data) {
                             var dataset = data.datasets[tooltipItem.datasetIndex];
-                            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                            var total = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
                                 return previousValue + currentValue;
                             });
                             var currentValue = dataset.data[tooltipItem.index];
-                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+                            var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
                             return data.labels[tooltipItem.index] + ": " + percentage + "%";
                         }
                     }
@@ -1934,7 +2026,7 @@ computed_result = DataUserCodeExecute(data_hash,
 
     }
 
-    function drawEnglishChart(){
+    function drawEnglishChart() {
         Chart.defaults.global.defaultFontFamily = 'Poppins, sans-serif', Chart.defaults.global.defaultFontColor = "#292b2c";
         var ctx = document.getElementById('myChart_us').getContext('2d');
         var chart = new Chart(ctx, {
@@ -1988,13 +2080,13 @@ computed_result = DataUserCodeExecute(data_hash,
                 },
                 tooltips: {
                     callbacks: {
-                        label: function(tooltipItem, data) {
+                        label: function (tooltipItem, data) {
                             var dataset = data.datasets[tooltipItem.datasetIndex];
-                            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                            var total = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
                                 return previousValue + currentValue;
                             });
                             var currentValue = dataset.data[tooltipItem.index];
-                            var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+                            var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
                             return data.labels[tooltipItem.index] + ": " + percentage + "%";
                         }
                     }

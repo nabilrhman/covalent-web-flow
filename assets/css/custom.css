@@ -340,6 +340,16 @@
 01. HEADING SECTION STYLE ENDS
 *===================================*/
 
+
+.title_default_light h4,
+.title_default_dark h4{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    /*text-transform: capitalize;*/
+}
+
+
 .title_border_right h4::before /*UNUSED*/
 {
     background-color: #0097a7;
@@ -393,7 +403,7 @@
 .section_subtitle
 {
     font-weight: 700 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 30px !important;
 }
 
 .red-yt

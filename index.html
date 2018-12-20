@@ -184,6 +184,17 @@
                     <li class="animation zh" data-animation="fadeInDown" data-animation-delay="0.8s"><a
                             class="nav-link page-scroll nav_item" href="#contact" id="contact_nav_zh">联系我们</a></li>
 
+                    <li class="animation us" data-animation="fadeInDown" data-animation-delay="1s"><a
+                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav">Testnet</a></li>
+                    <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1s"><a
+                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav_zh">测试网络</a></li>
+
+                    <li class="animation us" data-animation="fadeInDown" data-animation-delay="1.2s"><a
+                            class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav">CovaChain</a>
+                    </li>
+                    <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1.2s"><a
+                            class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav_zh">联系我们</a></li>
+
                 </ul>
                 <ul class="navbar-nav nav_btn align-items-center" id="nav_lang_btn">
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="0s">
@@ -1866,10 +1877,14 @@
 
             console.log(event.target.id);
             if (event.target.id === 'testnet_nav' || event.target.id === 'testnet_nav_zh') {
-                location.replace("https://docs.covalent.ai");
+                var win = window.open('https://docs.covalent.ai', '_blank');
+                win.focus();
+                /*location.replace("https://docs.covalent.ai");*/
             }
             else if (event.target.id === 'covachain_nav' || event.target.id === 'covachain_nav_zh') {
-                location.replace("http://blocks.covalent.ai:3000");
+                var win = window.open('http://blocks.covalent.ai:3000', '_blank');
+                win.focus();
+                /*location.replace("http://blocks.covalent.ai:3000");*/
             }
             else {
                 $(".nav_item").removeClass('active');

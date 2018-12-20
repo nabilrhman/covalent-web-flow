@@ -383,18 +383,7 @@ section.small_pt {
 .v_cyan_blue .navbar-expand-lg .navbar-nav .dropdown-menu li:hover > a {
 	background-color: #224996;
 }
-    /* -------------------------------------------------
-      Custom @author Nabil Rahman
-    ---------------------------------------------------*/
-    .img_lg_show
-    {
-        display: block;
-    }
 
-    .img_lg_hide
-    {
-        display: none;
-    }
 }
 /* -------------------------------------------------
   max-width: 991px
@@ -457,25 +446,7 @@ p,
 {
 	max-width: 20vw !important;
 }*/
-.cova_md_logo_big
-{
-    width: 200px !important;
-}
 
-    .cova_md_graphical_logo_big
-    {
-        width: 100px !important;
-    }
-
-    .img_md_show
-    {
-        display: block;
-    }
-
-    .img_md_hide
-    {
-        display: none;
-    }
 
 
 

@@ -11,6 +11,11 @@
     overflow: hidden;
 }*/
 
+.logo_light
+{
+    width: 70px;
+}
+
 .cova_logo_big
 {
     max-width: 360px;

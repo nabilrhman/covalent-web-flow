@@ -212,6 +212,12 @@
     {
         display: none;
     }
+
+    .logo_light
+    {
+        max-width: 80% !important;
+    }
+
 }
 
 
@@ -367,6 +373,11 @@
     .custom_divider
     {
         height: 0px;
+    }
+
+    .section_banner {
+        padding: 75px 0 30px;
+        padding-bottom: 30px;
     }
 }
 

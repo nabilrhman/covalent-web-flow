@@ -140,7 +140,7 @@
                 <li class="animation" data-animation="fadeInDown" data-animation-delay="0.1s">
                     <div class="lng_dropdown">
                         <select name="countries" id="lng_select_mobile">
-                            <option selected = "selected" value='us' data-image="assets/images/eng_flage.png"
+                            <option selected="selected" value='us' data-image="assets/images/eng_flage.png"
                                     data-title="United States">ENG
                             </option>
                             <option value='zh' data-image="assets/images/chn_flage.png" data-title="China">中文
@@ -189,7 +189,7 @@
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="0.7s">
                         <div class="lng_dropdown">
                             <select name="countries" id="lng_select">
-                                <option value='us' data-image="assets/images/eng_flage.png"
+                                <option selected="selected" value='us' data-image="assets/images/eng_flage.png"
                                         data-title="United States">ENG
                                 </option>
                                 <option value='zh' data-image="assets/images/chn_flage.png" data-title="China">中文
@@ -726,7 +726,7 @@
                         通过编写智能条款（Smart Policy），强制使用者采用 k-匿名性（k-anonymity） 或差分隐私（Differential Privacy），数据拥有者可以可以限制他人对于数据的更改、破坏。
                     </p>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                    <pre id="preSmartData"class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
+                    <pre id="preSmartData" class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
                             id="codeCreateSmartData" class="language-python"></code></pre>
                     </p>
 
@@ -746,7 +746,7 @@
                         由于存在多种解决方案，目前的数字版权管理（DRM）生态极为混乱。大多数字版权管理政策具有限制性强、不透明、捆绑于数据等特点，这大大加剧其使用难度。
                         开放的 COVA 协议，使得数据所有者可以编写透明的智能条款作为数据使用政策。该政策不会破坏数据本身，且失败率极低。
                     </p>
-                    <pre id="prePolicy"class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
+                    <pre id="prePolicy" class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><code
                             id="codeCreatePolicy" class="language-python"></code></pre>
                     </p>
 
@@ -1739,43 +1739,36 @@
         createAnimatedTypedCode("<br><code id='codeCreateSmartDataCode' class='language-python'></code>", "smart_data = DataOwnerFileProcessor(file_path, policies).run()^1000", "#codeCreateSmartDataComment", "#codeCreateSmartDataCode", createSmartDataSuccess);
     }
 
-    function createSmartDataSuccess()
-    {
+    function createSmartDataSuccess() {
         createAnimatedTypedCode("<br><br><code id='codeCreateSmartDataSuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA CREATED^1000", "#codeCreateSmartDataCode", "#codeCreateSmartDataSuccess", createRegisterComment, 0);
     }
 
-    function createRegisterComment()
-    {
+    function createRegisterComment() {
         createAnimatedTypedCode("<br><br><code id='codeCreateRegisterComment' class='language-python' style='color: slategray;'></code>", "# Register smart data on COVA^1000", "#codeCreateSmartDataSuccess", "#codeCreateRegisterComment", createRegisterCode);
 
     }
 
-    function createRegisterCode()
-    {
+    function createRegisterCode() {
         createAnimatedTypedCode("<br><code id='codeCreateRegisterCode' class='language-python'></code>", "DataOwnerSecretUploader(smart_data, download_link).run()^1000", "#codeCreateRegisterComment", "#codeCreateRegisterCode", createRegisterSuccess);
 
     }
 
-    function createRegisterSuccess()
-    {
+    function createRegisterSuccess() {
         createAnimatedTypedCode("<br><br><code id='codeCreateRegisterSuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA REGISTERED^1000", "#codeCreateRegisterCode", "#codeCreateRegisterSuccess", undefined, 0);
 
     }
 
-    function createPolicyComment()
-    {
+    function createPolicyComment() {
         createAnimatedTypedCode("<code id='codeCreatePolicyComment' class='language-python' style='color: slategray;'></code>", "^5000# Utilize smart data with policy^1000", "#codeCreatePolicy", "#codeCreatePolicyComment", createPolicyCode);
 
     }
 
-    function createPolicyCode()
-    {
+    function createPolicyCode() {
         createAnimatedTypedCode("<br><code id='codeCreatePolicyCode' class='language-python'></code>", "computed_result = DataUserCodeExecute(data_hash,\n eth_pub_key, eth_private_key,\n timeout, code_file_path).run()^1000", "#codeCreatePolicyComment", "#codeCreatePolicyCode", createPolicySuccess);
 
     }
 
-    function createPolicySuccess()
-    {
+    function createPolicySuccess() {
         createAnimatedTypedCode("<br><br><code id='codeCreatePolicySuccess' class='language-python' style='color: #09ec86;'></code>", "> SMART DATA SECURED WITH POLICY^1000", "#codeCreatePolicyCode", "#codeCreatePolicySuccess", undefined, 0);
 
     }
@@ -1884,8 +1877,7 @@
                 $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
             }
 
-            if(lang == 'zh')
-            {
+            if (lang == 'zh') {
                 $('#lng_select_mobile_child').find('ul').find('li:nth-child(1)').removeClass('selected');
                 $('#lng_select_mobile_child').find('ul').find('li:nth-child(2)').addClass('selected');
                 $('#lng_select_mobile_child').find('ul').find('li:nth-child(2)').click();
@@ -1916,8 +1908,7 @@
                 $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
             }
 
-            if(lang == 'zh')
-            {
+            if (lang == 'zh') {
                 $('#lng_select_child').find('ul').find('li:nth-child(1)').removeClass('selected');
                 $('#lng_select_child').find('ul').find('li:nth-child(2)').addClass('selected');
                 $('#lng_select_child').find('ul').find('li:nth-child(2)').click();

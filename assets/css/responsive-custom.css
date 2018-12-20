@@ -215,7 +215,7 @@
 
     .logo_light
     {
-        max-width: 80% !important;
+        width: 60px !important;
     }
 
 }

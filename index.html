@@ -1786,27 +1786,23 @@
 
         /*TYPED ANIMATION ENDS*/
 
+        var alreadyShowedEnglish = 0;
         $('#myChart_us').isInViewport(function (status) {
-            if (status === 'entered') {
-
+            if (status === 'entered' && alreadyShowedEnglish == 0) {
                 drawEnglishChart();
-
-
+                alreadyShowedEnglish = 1;
             }
 
         });
 
+        var alreadyShowedChina = 0;
         $('#myChart_zh').isInViewport(function (status) {
-            if (status === 'entered') {
-
+            if (status === 'entered' && alreadyShowedChina == 0) {
                 drawChineseChart();
-
-
+                alreadyShowedChina = 1;
             }
 
         });
-
-
         /* SHOW ENGLISH CHART REGARDLESS */
 
         /* OWL CAROUSEL CUSTOM STYLE */

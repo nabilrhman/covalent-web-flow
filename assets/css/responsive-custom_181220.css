@@ -131,6 +131,22 @@
 }
 
 /* -------------------------------------------------
+  width: 1920px
+---------------------------------------------------*/
+@media only screen and (width: 1920px)
+{
+
+    .cova_logo_big
+    {
+        max-width: 360px !important;
+    }
+
+    .cova_graphical_logo_big {
+        max-width: 180px !important;
+    }
+}
+
+/* -------------------------------------------------
   min-width: 991px
 ---------------------------------------------------*/
 @media only screen and (min-width: 991px)

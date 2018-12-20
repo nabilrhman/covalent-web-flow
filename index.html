@@ -1711,7 +1711,7 @@
         }
         else {
             // argument not passed or undefined
-            typeSpeed = 40;
+            typeSpeed = 30;
         }
         var options = {
             strings: [text],
@@ -1759,7 +1759,7 @@
     }
 
     function createPolicyComment() {
-        createAnimatedTypedCode("<code id='codeCreatePolicyComment' class='language-python' style='color: slategray;'></code>", "^5000# Utilize smart data with policy^1000", "#codeCreatePolicy", "#codeCreatePolicyComment", createPolicyCode);
+        createAnimatedTypedCode("<code id='codeCreatePolicyComment' class='language-python' style='color: slategray;'></code>", "# Utilize smart data with policy^1000", "#codeCreatePolicy", "#codeCreatePolicyComment", createPolicyCode);
 
     }
 
@@ -1778,10 +1778,26 @@
 
         /*TYPED ANIMATION STARTS*/
 
-        createAnimatedTypedCode("<code id='codeCreateSmartDataComment' class='language-python' style='color: slategray;'></code>", "^5000# Create smart data^1000", "#codeCreateSmartData", "#codeCreateSmartDataComment", createSmartDataCode);
-        createPolicyComment();
+
 
         //createCommentTypedAnim();
+
+        var smartDataAlreadyShowed = 0
+        $('#preSmartData').isInViewport(function (status) {
+            if (status === 'entered' && smartDataAlreadyShowed == 0) {
+                createAnimatedTypedCode("<code id='codeCreateSmartDataComment' class='language-python' style='color: slategray;'></code>", "# Create smart data^1000", "#codeCreateSmartData", "#codeCreateSmartDataComment", createSmartDataCode);
+                smartDataAlreadyShowed = 1;
+            }
+
+        });
+
+        var policyAlreadyShowed = 0
+        $('#prePolicy').isInViewport(function (status) {
+            if (status === 'entered' && policyAlreadyShowed == 0) {
+                createPolicyComment();
+                policyAlreadyShowed = 1;
+            }
+        });
 
 
         /*TYPED ANIMATION ENDS*/

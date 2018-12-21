@@ -16,6 +16,11 @@
     width: 70px;
 }
 
+.cova_logo_subtitle_banner
+{
+    padding-bottom: 1rem;
+}
+
 .cova_logo_big
 {
     max-width: 330px;
@@ -24,12 +29,13 @@
 .cova_graphical_logo_big
 {
     max-width: 150px;
+    padding-bottom: 1rem
 }
 
 .cova_logo_title
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     font-weight: 500 !important;
 }
@@ -61,7 +67,7 @@
 
 .header-play-icon
 {
-    font-size: 26px !important;
+    font-size: 24px;
     margin-left: 4px !important;
     margin-right: 4px !important;
 }
@@ -104,11 +110,17 @@
     width: 253px;
 }
 
+.btn_group
+{
+    padding-bottom: 0.4rem;
+}
+
 .heading_buttons_dropdown .dropdown-item
 {
     color: white;
 
 }
+
 
 .dropdown-item:hover
 {
@@ -155,7 +167,8 @@
 .heading-icons-row
 {
     position: relative;
-    z-index: -1;
+    /*Uncomment if moved down*/
+    /*z-index: -1;*/
 }
 
 .heading-icons-column
@@ -175,7 +188,7 @@
     border-radius: 100%;
     color: #ffffff;
     float: left;
-    font-size: 26px;
+    font-size: 24px;
     height: 30px;
     line-height: 30px;
     text-align: center;

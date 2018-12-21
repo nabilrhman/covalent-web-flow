@@ -333,7 +333,8 @@
                 <div class="btn_group animation text-center heading_buttons_wrapper"
                      data-animation="fadeInDown" data-animation-delay="0.7s">
                     <div class="us" style="display: inline">
-                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us"
+
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us" id="testnet_dd_btn"
                            href="javascript:void(0)" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             Join Public Testnet
@@ -1799,8 +1800,17 @@
 
 
     $(document).ready(function () {
+/*
+        $('#testnet_dd_btn').on('mouseover', function () {
+            // Do something for both
+            $('#testnet_dd_btn').click();
+        });
 
-
+        $('#testnet_dd_btn').on('mouseout', function () {
+            // Do something for both
+            $('#testnet_dd_btn').click();
+        });*/
+        /*SHOW SVG*/
 
         var alreadyShowedLayerSVG = 0;
         $('#svg_layer_animated').isInViewport(function (status) {
@@ -1810,7 +1820,7 @@
                 $("#svg_layer_animated").show();
                 setTimeout(function(){
                     $("#svg_layer_animated").attr("src","assets/images/cova_protocol_layers_anim.svg");
-                }, 300);
+                }, 400);
 
                 console.log("IN VIEW SVG");
                 /*alreadyShowedLayerSVG = 1;*/

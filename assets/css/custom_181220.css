@@ -67,7 +67,7 @@
 
 .header-play-icon
 {
-    font-size: 26px !important;
+    font-size: 24px;
     margin-left: 4px !important;
     margin-right: 4px !important;
 }
@@ -188,7 +188,7 @@
     border-radius: 100%;
     color: #ffffff;
     float: left;
-    font-size: 26px;
+    font-size: 24px;
     height: 30px;
     line-height: 30px;
     text-align: center;

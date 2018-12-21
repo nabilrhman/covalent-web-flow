@@ -688,13 +688,12 @@
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 img_md_hide img_lg_show">
-                <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInDown"
-                     data-animation-delay="0s">
-                    <img src="assets/images/layers.png">
+                <div class="res_md_mb_50 res_sm_mb_20 text-center">
+                    <img src="assets/images/cova_protocol_layers_anim_begin.svg" id="svg_layer_animated">
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide">
+            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide" id="svg_later_animated">
                 <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInDown"
                      data-animation-delay="0s">
                     <img src="assets/images/layers_md.png" style="max-width: 350px;">
@@ -1798,6 +1797,27 @@
 
 
     $(document).ready(function () {
+
+
+
+        var alreadyShowedLayerSVG = 0;
+        $('#svg_layer_animated').isInViewport(function (status) {
+            if (status === 'entered' && alreadyShowedLayerSVG == 0) {
+
+                setTimeout(function(){
+                    $("#svg_layer_animated").attr("src","assets/images/cova_protocol_layers_anim.svg");
+                }, 300);
+
+                console.log("IN VIEW SVG");
+                /*alreadyShowedLayerSVG = 1;*/
+            }
+            else
+            {
+                $("#svg_layer_animated").attr("src","assets/images/cova_protocol_layers_anim_begin.svg");
+
+            }
+
+        });
 
         /*TYPED ANIMATION STARTS*/
 

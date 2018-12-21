@@ -1246,7 +1246,7 @@ header a:hover,
 	cursor:pointer;
 	padding-right: 10px;
 	position: relative;
-	width: 70px !important;
+	width: 78px !important;
 }
 .arrow::before {
 	color: #ffffff;

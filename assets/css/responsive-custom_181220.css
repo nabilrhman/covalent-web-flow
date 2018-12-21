@@ -252,6 +252,14 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 480px)
 {
+    .lng_dropdown .dd.ddcommon {
+        cursor:pointer;
+        padding-right: 10px;
+        position: relative;
+        width: 72px !important;
+       
+    }
+
     /* MAKES HEADING BUTTONS AND DROPDOWS SAME SIZED FOR MOBILE*/
     .heading_button, .heading_buttons_dropdown, .telegram_dropdown
     {

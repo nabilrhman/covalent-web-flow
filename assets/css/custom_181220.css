@@ -579,5 +579,14 @@ a {
     width: 16.6%;
 }
 
+#preSmartData
+{
+    min-height: 217px;
+}
+
+#prePolicy
+{
+    min-height: 154px;
+}
 
 

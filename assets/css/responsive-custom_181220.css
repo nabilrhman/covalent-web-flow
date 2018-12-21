@@ -4,15 +4,6 @@
 @media (min-width: 1200px)
 {
 
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -25,15 +16,7 @@
 ---------------------------------------------------*/
 @media only screen and (min-width: 991px) and (max-width: 1199px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
 
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -47,15 +30,6 @@
 ---------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -69,15 +43,6 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 1600px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -91,15 +56,6 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 1440px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -114,15 +70,6 @@
 @media only screen and (max-width: 1199px)
 {
 
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -151,16 +98,6 @@
 ---------------------------------------------------*/
 @media only screen and (min-width: 991px)
 {
-
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -194,15 +131,6 @@
         padding-left: 0px !important;
     }
 
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -242,15 +170,6 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 767px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -264,15 +183,6 @@
 ---------------------------------------------------*/
 @media only screen and (max-width: 640px)
 {
-    .cova_logo_subtitle_banner
-    {
-        padding-bottom: 1.4rem !important;
-    }
-
-    .cova_graphical_logo_big
-    {
-        padding-bottom: 1.3rem
-    }
 
     .announcement_item {
 
@@ -299,20 +209,23 @@
         padding-left: 0px;
     }
 
+    /*TO KEEP THE STYLE: DECREASE LOGO PADDING WHEN 480px*/
     .cova_logo_subtitle_banner
     {
-        padding-bottom: 1rem !important;
+        padding-bottom: 0.5rem !important;
     }
 
     .cova_graphical_logo_big
     {
-        padding-bottom: 1rem
+        padding-bottom: 0.5rem
     }
 
-    .heading-icons-wrapper
+    .btn_group
     {
-        padding-top: 0.6rem !important;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
     }
+
 
     .heading-icons li i {
         margin-bottom: 0px !important; ;
@@ -357,19 +270,15 @@
         font-size: 14px;
     }
 
+    /*DECREASE LOGO PADDING WHEN 480px*/
     .cova_logo_subtitle_banner
     {
-        padding-bottom: 1rem !important;
+        padding-bottom: 0.5rem !important;
     }
 
     .cova_graphical_logo_big
     {
-        padding-bottom: 1rem
-    }
-
-    .heading-icons-wrapper
-    {
-        padding-top: 0.6rem !important;
+        padding-bottom: 0.5rem
     }
 
     .heading-icons li i {
@@ -412,10 +321,10 @@
         padding-bottom: 1rem
     }
 
-    .heading-icons-wrapper
+   /* .heading-icons-wrapper
     {
-        padding-top: 0.6rem !important;
-    }
+        padding-top: 0.1rem !important;
+    }*/
 
     .heading-icons li i {
         margin-bottom: 0px !important;

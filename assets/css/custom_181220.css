@@ -121,6 +121,35 @@
 
 }
 
+.dropdown-toggle::after,.dropdown-toggler::after {
+    border: 0 none;
+    content: "\f3d3";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 8px;
+    vertical-align: middle;
+    width: auto;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: all 0.1s ease-out 0s;
+}
+
+
+
+.dropdown-toggle:hover:after,.dropdown-toggler:hover:after {
+    border: 0 none;
+    content: "\f3d3";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: auto;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: all 0.1s ease-out 0s;
+}
 
 .dropdown-item:hover
 {
@@ -579,5 +608,14 @@ a {
     width: 16.6%;
 }
 
+#preSmartData
+{
+    min-height: 217px;
+}
+
+#prePolicy
+{
+    min-height: 154px;
+}
 
 

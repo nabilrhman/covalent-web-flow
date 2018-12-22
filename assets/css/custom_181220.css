@@ -10,6 +10,16 @@
     position: relative;
     overflow: hidden;
 }*/
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    z-index: 1001;
+}
 
 .logo_light
 {
@@ -121,7 +131,7 @@
 
 }
 
-.dropdown-toggle::after,.dropdown-toggler::after {
+/*.dropdown-toggle::after,.dropdown-toggler::after {
     border: 0 none;
     content: "\f3d3";
     font-family: ionicons;
@@ -137,7 +147,7 @@
 
 
 
-.dropdown-toggle:hover:after,.dropdown-toggler:hover:after {
+.dropdown-toggle:active:after,.dropdown-toggler:active:after {
     border: 0 none;
     content: "\f3d3";
     font-family: ionicons;
@@ -149,6 +159,31 @@
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     transition: all 0.1s ease-out 0s;
+}*/
+
+.dropdown-toggle[data-toggle="collapse"]:after {
+    border: 0 none;
+    content: "\f3d0";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 8px;
+    vertical-align: middle;
+    width: auto;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform:    rotate(-90deg);
+    -ms-transform:     rotate(-90deg);
+    -o-transform:      rotate(-90deg);
+    transform:         rotate(-90deg);
+}
+.dropdown-toggle[data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(180deg);
+    -moz-transform:    rotate(180deg);
+    -ms-transform:     rotate(180deg);
+    -o-transform:      rotate(180deg);
+    transform:         rotate(180deg);
 }
 
 .dropdown-item:hover

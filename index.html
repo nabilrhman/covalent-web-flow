@@ -115,10 +115,11 @@
 <!-- START LOADER -->
 <div id="loader-wrapper">
     <div id="loading-center-absolute">
-        <div class="object" id="object_four"></div>
+        <!--<div class="object" id="object_four"></div>
         <div class="object" id="object_three"></div>
         <div class="object" id="object_two"></div>
-        <div class="object" id="object_one"></div>
+        <div class="object" id="object_one"></div>-->
+        <img src="assets/images/cova_loader.svg" alt="logo"/>
     </div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
@@ -225,10 +226,10 @@
             <div class="col-lg-12 col-md-12 col-sm-12 order-lg-first">
                 <div class="animation text-center animation" data-animation="fadeInDown" data-animation-delay="0.3s">
                     <img src="assets/images/cova-geometric-logo.svg" alt="Cova Logo"
-                         class="cova_graphical_logo_big cova_md_graphical_logo_big"/>
+                         class="cova_graphical_logo_big cova_md_graphical_logo_big" />
                 </div>
                 <div class="animation text-center animation " data-animation="fadeInUp" data-animation-delay="0.4s">
-                    <img src="assets/images/cova-logo.svg" alt="Cova Logo" class="cova_logo_big cova_md_logo_big "/>
+                    <img src="assets/images/cova-logo.svg" alt="Cova Logo" class="cova_logo_big cova_md_logo_big"/>
                 </div>
                 <div class="banner_text text_md_center text-center">
                     <h5 class="animation cova_logo_title text-white us" data-animation="fadeInUp"
@@ -332,15 +333,15 @@
                 <!--BUTTON GROUP STARTS-->
                 <div class="btn_group animation text-center heading_buttons_wrapper"
                      data-animation="fadeInDown" data-animation-delay="0.7s">
-                    <div class="us" style="display: inline">
+                    <div class="us" style="display: inline" id="testnet_dd_btn">
 
-                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us" id="testnet_dd_btn"
+                        <a class="btn btn-default dropdown-toggle mr-2 mb-2 heading_button us" id="testnet_dd_btn_link"
                            href="javascript:void(0)" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             Join Public Testnet
                         </a>
 
-                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown us"
+                        <div class="dropdown-menu mr-2 mb-2 heading_buttons_dropdown us" id="testnet_dd_btn_dropdown"
                              aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item us"
                                href="https://docs.covalent.ai/quick-start/">Quickstart Guide</a>
@@ -1690,8 +1691,14 @@
 
 <a href="#" class="scrollup btn-default"><i class="ion-ios-arrow-up"></i></a>
 
+
+
 <!-- Latest jQuery -->
 <script src="assets/js/jquery-1.12.4.min.js"></script>
+
+<!-- Lottie.js (airbnb - for SVG animation)
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
+<script src="assets/js/custom_anim.js"></script>-->
 
 <!-- jQuery UI-->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -1722,9 +1729,14 @@
 <script src="assets/js/prism.js"></script>
 
 
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <script src="assets/js/isInViewport.jquery.js"></script>
+
+
 
 <script>
 
@@ -1800,15 +1812,16 @@
 
 
     $(document).ready(function () {
-/*
-        $('#testnet_dd_btn').on('mouseover', function () {
-            // Do something for both
-            $('#testnet_dd_btn').click();
-        });
 
-        $('#testnet_dd_btn').on('mouseout', function () {
+        /*$('#testnet_dd_btn').on('mouseover', function () {
             // Do something for both
-            $('#testnet_dd_btn').click();
+
+            $('#testnet_dd_btn_dropdown').addClass('show');
+            $('#testnet_dd_btn').addClass('show');
+        });*/
+
+        /*$('#testnet_dd_btn').on('click', function () {
+            $('#testnet_dd_btn').addClass('active')
         });*/
         /*SHOW SVG*/
 

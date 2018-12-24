@@ -53,7 +53,7 @@
 .cova_logo_subtitle
 {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: normal !important;
     text-transform: uppercase;
 
@@ -63,7 +63,6 @@
 {
 
     font-weight: 600;
-    padding-bottom: 5px;
     border-color: #0097A7;
 }
 

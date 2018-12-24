@@ -701,7 +701,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide mb-5 " id="svg_later_animated">
+            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide mb-5">
                 <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInDown"
                      data-animation-delay="0s">
                     <img src="assets/images/layers_md.svg" style="max-width: 350px;">
@@ -1189,10 +1189,18 @@
                     <p class="animation" data-animation="fadeInUp"
                        data-animation-delay="0s">In the spirit of transparency, and in the spirit of open-sourcing the Covalent project, we will start crediting major contributors with each technical module. Currently, most of the names here are members of the Covalent Foundation. Going forward, we expect to see more part-time contributors hailing from technical communities around the world.</p>
                 </div>
-                <div class="res_md_mt_50 res_sm_mt_20 text-center animation" data-animation="fadeInDown"
+                <div class="text-center animation img_md_hide img_lg_show"  data-animation="fadeInDown"
                      data-animation-delay="0s">
-                    <img src="assets/images/team_technical.png" alt="Technical team" style="max-width: 90%"/>
+                    <img src="assets/images/team.svg" id="svg_team_animated" style="max-width: 900px;">
                 </div>
+                <div class="text-center animation img_md_show img_lg_hide" data-animation="fadeInDown"
+                     data-animation-delay="0s">
+                    <img src="assets/images/team_md_outlined.svg" style="max-width: 900px;">
+                </div>
+                <!--<div class="text-center animation" data-animation="fadeInDown"
+                     data-animation-delay="0s">
+                    <img src="assets/images/team_md_outlined.svg" style="max-width: 500px;">
+                </div>-->
             </div>
         </div>
     </div>
@@ -1832,28 +1840,6 @@
 
     $(document).ready(function () {
 
-        /*===================================*
-         02. SMOOTH SCROLLING JS
-         *===================================*/
-        // Select all links with hashes
-        $('a.page-scroll').on('click', function (event) {
-            // On-page links
-            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-                // Figure out element to scroll to
-                var target = $(this.hash),
-                    speed = $(this).data("speed") || 800;
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    event.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 60
-                    }, speed);
-                }
-            }
-        });
 
        /* $('.cova_logo_subtitle_link_wrapper').on('mouseover', function () {
 
@@ -1909,6 +1895,25 @@
             else
             {
                 $("#svg_layer_animated").attr("src","assets/images/cova_protocol_layers_anim_begin.svg");
+            }
+
+        });
+
+        var alreadyShowedTeamSVG = 0;
+        $('#svg_team_animated').isInViewport(function (status) {
+            if (status === 'entered' && alreadyShowedTeamSVG  == 0) {
+
+
+                $("#svg_team_animated").show();
+                setTimeout(function(){
+                    $("#svg_team_animated").attr("src","assets/images/team_anim.svg");
+                }, 400);
+
+                /*alreadyShowedLayerSVG = 1;*/
+            }
+            else
+            {
+                $("#svg_team_animated").attr("src","assets/images/team.svg");
             }
 
         });

@@ -508,7 +508,7 @@
 <!-- START INTRO SECTION -->
 <section class="blue_light_bg banner_shape" data-z-index="1" data-bleed="-40" data-parallax="scroll"
          data-image-src="assets/images/banner_bg3.png">
-    <div class="divider very_small_divider"></div>
+    <!--<div class="divider very_small_divider"></div>-->
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12 order-lg-first">
@@ -619,7 +619,7 @@
                 </div>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12">
-                <div class="title_default_dark title_border text_md_center text-left">
+                <div class="title_default_dark title_border">
                     <h4 class="animation us" data-animation="fadeInUp"
                         data-animation-delay="0s">Discover a wealth of previously inaccessible data</h4>
                     <h4 class="animation zh" data-animation="fadeInUp" data-animation-delay="0s">数据使用者：发现脚下的金矿</h4>
@@ -653,15 +653,17 @@
 <!-- START TECHNOLOGY SECTION -->
 <section id="tech" class="section_token blue_light_bg" data-z-index="1" data-bleed="-40" data-parallax="scroll"
          data-image-src="assets/images/token_bg.png">
+    <div class="divider medium_small_divider img_md_hide img_lg_show"></div>
+    <div class="divider medium_divider img_md_show img_lg_hide"></div>
     <div class="angle_top"></div>
-    <div class="divider large_divider"></div>
+    <!--<div class="divider large_divider"></div>-->
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="title_default_light title_border text_md_center">
                     <h1 class="animation text-white header_title_big us" style="font-weight: bold; margin-bottom: 30px;"
                         data-animation="fadeInUp" data-animation-delay="0s">Technology</h1>
-                    <h1 class="animation text-white text_md_small zh" style="font-weight: bold; margin-bottom: 30px;"
+                    <h1 class="animation text-white header_title_big zh" style="font-weight: bold; margin-bottom: 30px;"
                         data-animation="fadeInUp" data-animation-delay="0s">技术</h1>
 
                     <p class="animation us" data-animation="fadeInUp"
@@ -676,7 +678,8 @@
             </div>
         </div>
     </div>
-    <div class="divider medium_divider img_lg_show img_md_hide"></div>
+    <div class="divider small_divider img_md_hide img_lg_show"></div>
+    <div class="divider medium_divider img_md_show img_lg_hide"></div>
     <div class="angle_bottom"></div>
 </section>
 <!-- END TECHNOLOGY SECTION -->
@@ -687,7 +690,7 @@
 
         <div class="row align-items-center">
 
-            <div class="col-lg-12 col-md-12 col-sm-12 pb-5">
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="title_default_dark title_border">
                     <h4 class="animation us" data-animation="fadeInUp"
                         data-animation-delay="0s">COVA Protocol: A Four Layer Solution</h4>
@@ -695,13 +698,13 @@
                         data-animation-delay="0s">为智能条款而生的程序语言</h4>
                 </div>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 img_md_hide img_lg_show mb-5">
+            <div class="col-lg-12 col-md-12 col-sm-12 img_md_hide img_lg_show">
                 <div class="res_md_mb_50 res_sm_mb_20 text-center">
                     <img src="assets/images/cova_protocol_layers_anim_begin_old.svg" id="svg_layer_animated">
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide mb-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 img_md_show img_lg_hide">
                 <div class="res_md_mb_50 res_sm_mb_20 text-center animation" data-animation="fadeInDown"
                      data-animation-delay="0s">
                     <img src="assets/images/layers_md.svg" style="max-width: 350px;">
@@ -1195,7 +1198,7 @@
                 </div>
                 <div class="text-center animation img_md_show img_lg_hide" data-animation="fadeInDown"
                      data-animation-delay="0s">
-                    <img src="assets/images/team_md_outlined.svg" style="max-width: 900px;">
+                    <img src="assets/images/team_md_outlined.svg" style="max-width: 450px;">
                 </div>
                 <!--<div class="text-center animation" data-animation="fadeInDown"
                      data-animation-delay="0s">
@@ -1838,8 +1841,8 @@
     }
 
 
-    $(document).ready(function () {
 
+    $(document).ready(function () {
 
        /* $('.cova_logo_subtitle_link_wrapper').on('mouseover', function () {
 
@@ -2168,24 +2171,15 @@
             // Fix heights on page load
             fixButtonHeights();
 
-            // Fix heights on window resize
-            $(window).resize(function () {
-                // Needs to be a timeout function so it doesn't fire every ms of resize
-                setTimeout(function () {
+            $(window).resize(function()
+            {
+                setTimeout(function() {
                     fixButtonHeights();
-                }, 50);
+                }, 100);
             });
         });
     })(jQuery);
 
-
-    // Fix heights on window resize
-    $(window).resize(function () {
-        // Needs to be a timeout function so it doesn't fire every ms of resize
-        setTimeout(function () {
-            fixButtonHeights();
-        }, 50);
-    });
 
     function drawChineseChart() {
         Chart.defaults.global.defaultFontFamily = 'Poppins, sans-serif', Chart.defaults.global.defaultFontColor = "#292b2c";

@@ -118,6 +118,7 @@
 
     }
 
+
 }
 
 /* -------------------------------------------------
@@ -162,6 +163,11 @@
     .logo_light
     {
         width: 60px !important;
+    }
+
+    .section_subtitle
+    {
+        margin-top: 15px;
     }
 
 }

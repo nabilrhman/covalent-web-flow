@@ -411,6 +411,17 @@ p,
 .res_md_mb_50 {
 	margin-bottom: 50px;
 }
+
+/*CUSTOM @author Nabilr*/
+.res_md_mb_70 {
+	margin-bottom: 70px;
+}
+
+.res_md_mb_90 {
+	margin-bottom: 90px;
+}
+/*CUSTOM ENDS*/
+
 .res_md_mt_20 {
 	margin-top: 20px;
 }

@@ -13,7 +13,7 @@ function getIP()
 }
 
 // set IP address and API access key 
-$ip = '134.201.250.155';
+$ip = getIP();
 $access_key = '17227ea018eab0c53480326da4831c89';
 
 // Initialize CURL:

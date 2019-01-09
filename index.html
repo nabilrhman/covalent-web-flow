@@ -194,7 +194,7 @@
                             class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav">CovaChain</a>
                     </li>
                     <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1.2s"><a
-                            class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav_zh">联系我们</a></li>
+                            class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav_zh">Cova 链</a></li>
 
                 </ul>
                 <ul class="navbar-nav nav_btn align-items-center" id="nav_lang_btn">
@@ -1589,7 +1589,7 @@
 
 
 <!-- START FOOTER SECTION -->
-<footer>
+<footer id="footer">
     <div class="top_footer blue_light_bg" data-z-index="1" data-parallax="scroll"
          data-image-src="assets/images/footer_bg.png">
         <div class="container">
@@ -1597,31 +1597,33 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="newsletter_form">
                         <h4 class="footer_title animation us" data-animation="fadeInUp"
-                            data-animation-delay="0s">Newsletter</h4>
+                            data-animation-delay="0.2s">Newsletter</h4>
                         <h4 class="footer_title animation zh" data-animation="fadeInUp"
-                            data-animation-delay="0s">通讯</h4>
+                            data-animation-delay="0.2s">通讯</h4>
                         <p class="animation us" data-animation="fadeInUp"
-                           data-animation-delay="0.2s">Get the latest news about COVA.</p>
+                           data-animation-delay="0.4s">Get the latest news about COVA.</p>
                         <p class="animation zh" data-animation="fadeInUp"
-                           data-animation-delay="0.2s">订阅 COVA 通讯，掌握 COVA 最新动态</p>
-
-                        <form action="https://covalent.us18.list-manage.com/subscribe/post?u=5d0fb48b27a59d9185c0f9159&amp;id=d61997b793" method="post" class="subscribe_form animation us" data-animation="fadeInUp" data-animation-delay="0.4s" target="_blank">
+                           data-animation-delay="0.4s">订阅 COVA 通讯，掌握 COVA 最新动态</p>
+                        <form action="https://covalent.us18.list-manage.com/subscribe/post-json?u=5d0fb48b27a59d9185c0f9159&amp;id=d61997b793&c=?" method="get" class="subscribe_form animation us" data-animation="fadeInUp" data-animation-delay="0.4s" target="_blank">
                             <input class="input-rounded" type="email" required placeholder="Enter Email" name="EMAIL"/>
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5d0fb48b27a59d9185c0f9159_d61997b793" tabindex="-1" value=""></div>
-                            <button type="submit" title="Subscribe" class="btn-info" name="subscribe"
+                            <button type="button" title="Subscribe" class="btn-info" name="subscribe"
                                     value="Submit"> Subscribe
                             </button>
                         </form>
 
-                        <form action="https://covalent.us18.list-manage.com/subscribe/post?u=5d0fb48b27a59d9185c0f9159&amp;id=d61997b793" method="post" class="subscribe_form animation zh" data-animation="fadeInUp" data-animation-delay="0.4s" target="_blank">
+                        <form action="https://covalent.us18.list-manage.com/subscribe/post-json?u=5d0fb48b27a59d9185c0f9159&amp;id=d61997b793&c=?" method="get" class="subscribe_form animation zh" data-animation="fadeInUp" data-animation-delay="0.4s" target="_blank">
                             <input class="input-rounded" type="email" required placeholder="您可填写电子邮件地址"/>
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5d0fb48b27a59d9185c0f9159_d61997b793" tabindex="-1" value=""></div>
-                            <button type="submit" title="Subscribe" class="btn-info" name="subscribe"
+                            <button type="button" title="Subscribe" class="btn-info" name="subscribe"
                                     value="Submit"> 订阅
                             </button>
                         </form>
+                        <br>
+                        <div id="newsletter_alert"></div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-8 res_md_mt_30 res_sm_mt_20">
                     <h4 class="footer_title animation us" data-animation="fadeInUp"
                         data-animation-delay="0s">Quick Links</h4>
@@ -1640,7 +1642,7 @@
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.6s"><a class="page-scroll"
                                 href="https://docs.covalent.ai" target="_blank">测试网络</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.7s"><a class="page-scroll"
-                                href="http://blocks.covalent.ai:3000">联系我们</a></li>
+                                href="http://blocks.covalent.ai:3000">Cova 链</a></li>
                     </ul>
 
                     <ul class="footer_link half_link list_none res_sm_mb_30 us">
@@ -1846,43 +1848,28 @@
 
     $(document).ready(function () {
 
-       /* $('.cova_logo_subtitle_link_wrapper').on('mouseover', function () {
-
-            console.log('mouse over fired');
-            // Do something for both
-
-            $(".hvr-underline-from-left").trigger("hover");
-        });*/
-
-        
-        /*$('#testnet_dd_btn').on('mouseover', function () {
-            // Do something for both
-
-            $('#testnet_dd_btn_dropdown').addClass('show');
-            $('#testnet_dd_btn').addClass('show');
-        });*/
-
-        /*$('#testnet_dd_btn').on('click', function () {
-            $('#testnet_dd_btn').addClass('active')
-        });*/
-        /*SHOW SVG*/
-
-
-       /* var alreadyShowedLogoSVG = 0;
-        $('#cova_geometric_logo').isInViewport(function (status) {
-            if (status === 'entered' && alreadyShowedLogoSVG == 0) {
-
-
-                $("#cova_geometric_logo").show();
-                setTimeout(function(){
-                    $("#cova_geometric_logo").attr("src","assets/images/cova_logo_animated.svg");
-                }, 400);
-
-                console.log("IN VIEW SVG");
-                /!*alreadyShowedLayerSVG = 1;*!/
-            }
-
-        });*/
+        /* Subscribe UX Fix */
+        /* Keeps on the same page, doesn't redirect */
+        $("button[name=subscribe]").click(function(){
+            var $form = $('.subscribe_form');
+            $.ajax({
+                type: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize(),
+                cache: false,
+                dataType: 'jsonp',
+                contentType: "application/json; charset=utf-8",
+                error: function(err) { alert("Could not connect to the registration server. Please try again later."); },
+                success: function (data) {
+                    if (data.result != 'success') {
+                        var el = "<div class='alert-text alert-text-danger animated fadeInLeft'> > " + data.msg + "</div>";
+                    } else {
+                        var el = "<div class='alert-text alert-text-success animated fadeInLeft'> > " + data.msg + "</div>";
+                    }
+                    $("#newsletter_alert").html(el);
+                }
+            });
+        });
 
         var alreadyShowedLayerSVG = 0;
         $('#svg_layer_animated').isInViewport(function (status) {
@@ -2083,25 +2070,7 @@
             }
         });
 
-        /*$.get("http://ipinfo.io", function (response) {
-         if(response.country.toLowerCase() == "cn")
-         {
-         $('#lng_select').val('zh');
-         var lang = $('#lng_select').val();
-         var op_lang = lang == 'zh' ? 'us' : 'zh';
-         $('.' + lang).show();
-         $('.' + op_lang).hide();
-         if (lang === 'us') {
-         $('.video').attr('href', 'https://www.youtube.com/watch?v=KYMddDJPVI8');
-         }
-         else {
-         $('.video').attr('href', 'https://v.qq.com/x/page/k08020rcvug.html');
-         }
-         }
-         }, "jsonp");*/
-
-        // for nav highlight
-
+        // For nav highlight
         // Cache selectors
         var topMenu = $("#navbarSupportedContent"),
             topMenuHeight = topMenu.outerHeight() + 15,

@@ -451,6 +451,53 @@
 01. HEADING SECTION STYLE ENDS
 *===================================*/
 
+/*===================================*
+02. FOOTER SECTION STYLE STARTS
+*===================================*/
+
+.alert-text-danger a:link
+{
+    color: #ffc107; !important;
+}
+
+.alert-text-danger a:hover
+{
+    color: #09ec86 !important;
+}
+
+.alert-text-danger
+{
+    color: #ffc107;
+}
+
+.alert-text-success
+{
+    color: lime;
+}
+
+.footer_menu li a,
+.footer_link a
+{
+    color: #fff;
+    font-size: 16px !important;
+}
+
+.footer_social li a
+{
+    color: #ffffff;
+    font-size: 16px !important;
+    text-transform: capitalize;
+}
+
+.copyright
+{
+    font-size: 16px;
+}
+
+/*===================================*
+02. FOOTER SECTION STYLE ENDS
+*===================================*/
+
 
 .title_default_light h4,
 .title_default_dark h4{
@@ -528,24 +575,16 @@
     background-image: -webkit-linear-gradient(left, #fc0300 0%, #900022 99%) !important;
 }
 
-.footer_menu li a,
-.footer_link a
+.alert-text-danger
 {
-    color: #fff;
-    font-size: 16px !important;
+    color: #ffc107;
 }
 
-.footer_social li a
+.alert-text-success
 {
-    color: #ffffff;
-    font-size: 16px !important;
-    text-transform: capitalize;
+    color: lime;
 }
 
-.copyright
-{
-    font-size: 16px;
-}
 
 /*
 

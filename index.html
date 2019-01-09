@@ -186,14 +186,19 @@
                             class="nav-link page-scroll nav_item" href="#contact" id="contact_nav_zh">联系我们</a></li>
 
                     <li class="animation us" data-animation="fadeInDown" data-animation-delay="1s"><a
-                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav">Testnet</a></li>
+                            class="nav-link page-scroll nav_item" href="#blog" id="blog_nav">Blog</a></li>
                     <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1s"><a
-                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav_zh">测试网络</a></li>
+                            class="nav-link page-scroll nav_item" href="#blog" id="blog_nav_zh">博客</a></li>
 
                     <li class="animation us" data-animation="fadeInDown" data-animation-delay="1.2s"><a
+                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav">Testnet</a></li>
+                    <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1.2s"><a
+                            class="nav-link page-scroll nav_item" href="#testnet" id="testnet_nav_zh">测试网络</a></li>
+
+                    <li class="animation us" data-animation="fadeInDown" data-animation-delay="1.4s"><a
                             class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav">CovaChain</a>
                     </li>
-                    <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1.2s"><a
+                    <li class="animation zh" data-animation="fadeInDown" data-animation-delay="1.4s"><a
                             class="nav-link page-scroll nav_item" href="#covachain" id="covachain_nav_zh">Cova 链</a></li>
 
                 </ul>
@@ -1639,9 +1644,10 @@
                                 href="#media">媒体</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.5s"><a class="page-scroll"
                                 href="#contact">联系我们</a></li>
-                        <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.6s"><a class="page-scroll"
-                                href="https://docs.covalent.ai" target="_blank">测试网络</a></li>
+                        <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.6s"><a class="page-scroll" href="https://blog.covalent.ai/" target="_blank">博客</a></li>
                         <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.7s"><a class="page-scroll"
+                                href="https://docs.covalent.ai" target="_blank">测试网络</a></li>
+                        <li class="animation zh" data-animation="fadeInUp" data-animation-delay="0.8s"><a class="page-scroll"
                                 href="http://blocks.covalent.ai:3000">Cova 链</a></li>
                     </ul>
 
@@ -1656,10 +1662,9 @@
                                 href="#media">Media</a></li>
                         <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.5s"><a class="page-scroll"
                                 href="#contact">Contact</a></li>
-                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.6s"><a class="page-scroll"
-                                                                                                          href="https://docs.covalent.ai" target="_blank">Testnet</a></li>
-                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.7s"><a class="page-scroll"
-                                href="http://blocks.covalent.ai:3000" target="_blank">Covachain</a></li>
+                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.6s"><a class="page-scroll" href="https://blog.covalent.ai/" target="_blank">Blog</a></li>
+                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.7s"><a class="page-scroll" href="https://docs.covalent.ai" target="_blank">Testnet</a></li>
+                        <li class="animation us" data-animation="fadeInUp" data-animation-delay="0.8s"><a class="page-scroll" href="http://blocks.covalent.ai:3000" target="_blank">Covachain</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-6 col-sm-4 res_md_mt_30 res_sm_mt_20">
@@ -2001,12 +2006,15 @@
                 win.focus();
                 /*location.replace("http://blocks.covalent.ai:3000");*/
             }
+            else if(event.target.id === 'blog_nav' || event.target.id === 'blog_nav_zh') {
+                var win = window.open('https://blog.covalent.ai/', '_blank');
+                win.focus();
+            }
             else {
                 $(".nav_item").removeClass('active');
                 $target = $(event.target);
                 $target.addClass('active');
             }
-
         });
 
         $("#lng_select").change(function () {

@@ -1767,9 +1767,6 @@
 <script src="assets/js/prism.js"></script>
 
 
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <script src="assets/js/isInViewport.jquery.js"></script>
@@ -1866,10 +1863,11 @@
                 contentType: "application/json; charset=utf-8",
                 error: function(err) { alert("Could not connect to the registration server. Please try again later."); },
                 success: function (data) {
+                    var index_split = data.msg.indexOf('<a');
                     if (data.result != 'success') {
-                        var el = "<div class='alert-text alert-text-danger animated fadeInLeft'> > " + data.msg + "</div>";
+                        var el = "<div class='alert-text alert-text-danger animated fadeInLeft'> > " + data.msg.slice(0, index_split) + "<br>" + data.msg.slice(index_split) +"</div>";
                     } else {
-                        var el = "<div class='alert-text alert-text-success animated fadeInLeft'> > " + data.msg + "</div>";
+                        var el = "<div class='alert-text alert-text-success animated fadeInLeft'> > Subscribed!</div>";
                     }
                     $("#newsletter_alert").html(el);
                 }

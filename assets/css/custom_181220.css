@@ -465,6 +465,16 @@
     color: #09ec86 !important;
 }
 
+.alert-text-info a:link
+{
+    color: #ffc107; !important;
+}
+
+.alert-text-info a:hover
+{
+    color: #09ec86 !important;
+}
+
 .alert-text-danger
 {
     color: #ffc107;
@@ -473,6 +483,16 @@
 .alert-text-success
 {
     color: lime;
+}
+
+.alert-text-info
+{
+    color: #ffc107;
+}
+
+.alert-text
+{
+    margin-top: 1em;
 }
 
 .footer_menu li a,

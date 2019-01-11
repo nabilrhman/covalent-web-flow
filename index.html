@@ -1624,7 +1624,6 @@
                                     value="Submit"> 订阅
                             </button>
                         </form>
-                        <br>
                         <div id="newsletter_alert"></div>
                     </div>
                 </div>
@@ -1864,11 +1863,17 @@
                 error: function(err) { alert("Could not connect to the registration server. Please try again later."); },
                 success: function (data) {
                     var index_split = data.msg.indexOf('<a');
-                    if (data.result != 'success') {
-                        var el = "<div class='alert-text alert-text-danger animated fadeInLeft'> > " + data.msg.slice(0, index_split) + "<br>" + data.msg.slice(index_split) +"</div>";
+                    if (index_split > -1) {
+                        if (data.result != 'success') {
+                            var el = "<div class='alert-text alert-text-danger animated fadeInLeft'>> " + data.msg.slice(0, index_split) + "<br>" + data.msg.slice(index_split) +"</div>";
+                        } else {
+                            var el = "<div class='alert-text alert-text-success animated fadeInLeft'>> Subscribed!</div>";
+                        }
                     } else {
-                        var el = "<div class='alert-text alert-text-success animated fadeInLeft'> > Subscribed!</div>";
+                        var el = "<div class='alert-text alert-text-info animated fadeInLeft'>> " + data.msg + "</div>";
+
                     }
+
                     $("#newsletter_alert").html(el);
                 }
             });

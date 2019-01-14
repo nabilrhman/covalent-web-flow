@@ -236,7 +236,7 @@
                         }
                     }
                 },
-                "interactivity": {
+                /*"interactivity": {
                     "detect_on": "canvas",
                     "events": {
                         "onhover": {
@@ -274,7 +274,7 @@
                             "particles_nb": 2
                         }
                     }
-                },
+                },*/
                 "retina_detect": true
             }
         );

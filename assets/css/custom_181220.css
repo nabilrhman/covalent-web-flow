@@ -10,10 +10,25 @@
     position: relative;
     overflow: hidden;
 }*/
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 70px;
+    width: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    z-index: 1001;
+}
 
 .logo_light
 {
     width: 70px;
+}
+
+.cova_logo_subtitle_banner
+{
+    padding-bottom: 1rem;
 }
 
 .cova_logo_big
@@ -24,12 +39,13 @@
 .cova_graphical_logo_big
 {
     max-width: 150px;
+    padding-bottom: 1rem
 }
 
 .cova_logo_title
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     font-weight: 500 !important;
 }
@@ -37,7 +53,7 @@
 .cova_logo_subtitle
 {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: normal !important;
     text-transform: uppercase;
 
@@ -47,7 +63,6 @@
 {
 
     font-weight: 600;
-    padding-bottom: 5px;
     border-color: #0097A7;
 }
 
@@ -59,9 +74,39 @@
     -webkit-transition: .5s all ease;
 }*/
 
+/* Underline From Left */
+.hvr-underline-from-left-custom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.hvr-underline-from-left-custom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 36px;
+    right: 100%;
+    bottom: 0;
+    background: #FFF;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-underline-from-left-custom:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+}
+
 .header-play-icon
 {
-    font-size: 26px !important;
+    font-size: 24px;
     margin-left: 4px !important;
     margin-right: 4px !important;
 }
@@ -104,10 +149,70 @@
     width: 253px;
 }
 
+.btn_group
+{
+    padding-bottom: 0.4rem;
+}
+
 .heading_buttons_dropdown .dropdown-item
 {
     color: white;
 
+}
+
+/*.dropdown-toggle::after,.dropdown-toggler::after {
+    border: 0 none;
+    content: "\f3d3";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 8px;
+    vertical-align: middle;
+    width: auto;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: all 0.1s ease-out 0s;
+}
+
+
+
+.dropdown-toggle:active:after,.dropdown-toggler:active:after {
+    border: 0 none;
+    content: "\f3d3";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: auto;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: all 0.1s ease-out 0s;
+}*/
+
+.dropdown-toggle[data-toggle="collapse"]:after {
+    border: 0 none;
+    content: "\f3d0";
+    font-family: ionicons;
+    height: auto;
+    line-height: normal;
+    margin-left: 8px;
+    vertical-align: middle;
+    width: auto;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform:    rotate(-90deg);
+    -ms-transform:     rotate(-90deg);
+    -o-transform:      rotate(-90deg);
+    transform:         rotate(-90deg);
+}
+.dropdown-toggle[data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(180deg);
+    -moz-transform:    rotate(180deg);
+    -ms-transform:     rotate(180deg);
+    -o-transform:      rotate(180deg);
+    transform:         rotate(180deg);
 }
 
 .dropdown-item:hover
@@ -155,7 +260,8 @@
 .heading-icons-row
 {
     position: relative;
-    z-index: -1;
+    /*Uncomment if moved down*/
+    /*z-index: -1;*/
 }
 
 .heading-icons-column
@@ -175,7 +281,7 @@
     border-radius: 100%;
     color: #ffffff;
     float: left;
-    font-size: 26px;
+    font-size: 24px;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -345,6 +451,73 @@
 01. HEADING SECTION STYLE ENDS
 *===================================*/
 
+/*===================================*
+02. FOOTER SECTION STYLE STARTS
+*===================================*/
+
+.alert-text-danger a:link
+{
+    color: #ffc107; !important;
+}
+
+.alert-text-danger a:hover
+{
+    color: #09ec86 !important;
+}
+
+.alert-text-info a:link
+{
+    color: #ffc107; !important;
+}
+
+.alert-text-info a:hover
+{
+    color: #09ec86 !important;
+}
+
+.alert-text-danger
+{
+    color: #ffc107;
+}
+
+.alert-text-success
+{
+    color: lime;
+}
+
+.alert-text-info
+{
+    color: #ffc107;
+}
+
+.alert-text
+{
+    margin-top: 1em;
+}
+
+.footer_menu li a,
+.footer_link a
+{
+    color: #fff;
+    font-size: 16px !important;
+}
+
+.footer_social li a
+{
+    color: #ffffff;
+    font-size: 16px !important;
+    text-transform: capitalize;
+}
+
+.copyright
+{
+    font-size: 16px;
+}
+
+/*===================================*
+02. FOOTER SECTION STYLE ENDS
+*===================================*/
+
 
 .title_default_light h4,
 .title_default_dark h4{
@@ -400,6 +573,11 @@
     height: 70px;
 }
 
+.medium_small_divider
+{
+    height: 85px;
+}
+
 .header_title_big /*COVA IS*/
 {
     font-size: 48px !important;
@@ -417,24 +595,16 @@
     background-image: -webkit-linear-gradient(left, #fc0300 0%, #900022 99%) !important;
 }
 
-.footer_menu li a,
-.footer_link a
+.alert-text-danger
 {
-    color: #fff;
-    font-size: 16px !important;
+    color: #ffc107;
 }
 
-.footer_social li a
+.alert-text-success
 {
-    color: #ffffff;
-    font-size: 16px !important;
-    text-transform: capitalize;
+    color: lime;
 }
 
-.copyright
-{
-    font-size: 16px;
-}
 
 /*
 
@@ -566,5 +736,14 @@ a {
     width: 16.6%;
 }
 
+#preSmartData
+{
+    min-height: 217px;
+}
+
+#prePolicy
+{
+    min-height: 154px;
+}
 
 

@@ -396,7 +396,7 @@ button:focus {
     height: 100%;
     z-index: 9999;
 }
-#loading-center-absolute {
+/*#loading-center-absolute {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -404,12 +404,12 @@ button:focus {
 	width: 200px;
 	margin-top: -100px;
 	margin-left: -100px;
-	-ms-transform: rotate(-135deg); 
-	-moz-transform: rotate(-135deg); 
-   	-webkit-transform: rotate(-135deg); 
+	-ms-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+   	-webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
 	z-index: 1001;
-}
+}*/
 .object{
 	-moz-border-radius: 50% 50% 50% 50%;
 	-webkit-border-radius: 50% 50% 50% 50%;
@@ -1246,7 +1246,7 @@ header a:hover,
 	cursor:pointer;
 	padding-right: 10px;
 	position: relative;
-	width: 70px !important;
+	width: 78px !important;
 }
 .arrow::before {
 	color: #ffffff;
